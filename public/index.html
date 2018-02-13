@@ -64,54 +64,18 @@
     <header>
       <header-menu-complex class="nav complex-menus" itemscope itemtype="WebsiteHeader">
         <meta itemprop="type" content="complex">
-        <div class="left logos"><a class="logo-link" href="/" itemprop="logos" itemscope itemtype="WebsiteLogo"><span itemprop="url">YOUR SITE</span></a>
+        <div class="left logos"><a class="logo-link" href="/" itemprop="logos" itemscope itemtype="WebsiteLogo"><img class="logo-image" src="/img/logo.png" alt="HANZO" itemprop="image"></a>
         </div>
         <div class="right secondary"><a class="fade-on-hover" href="" tabindex="0">Support</a><a class="fade-on-hover" href="/" tabindex="0">Call to Action</a>
         </div>
-        <div class="center primary"><span class="menu" tabindex="0" data-menu-title="Menu 1" onmouseenter="{ showMenu }" onfocus="{ showMenu }" onmouseleave="{ hideMenu }" onblur="{ hideMenu }">
-            <div class="menu-title fade-on-hover">Menu 1</div></span><span class="menu" tabindex="0" data-menu-title="Menu 2" onmouseenter="{ showMenu }" onfocus="{ showMenu }" onmouseleave="{ hideMenu }" onblur="{ hideMenu }">
-            <div class="menu-title fade-on-hover">Menu 2</div></span>
+        <div class="center primary"><a class="fade-on-hover" href="" tabindex="0">Support</a><a class="fade-on-hover" href="/" tabindex="0">Call to Action</a>
         </div>
         <div class="menu-wrapper { active: menuToShow }" onmouseleave="{ hideMenu }">
-          <div class="menu-bodies" itemprop="menuCollections" itemscope itemtype="WebsiteMenuCollection">
-            <div class="menu-body { active: &quot;Menu 1&quot; == menuToShow, from-right: slideDirection == &quot;right&quot;, from-left: slideDirection == &quot;left&quot;}" data-menu="Menu 1" itemprop="menus" itemscope itemtype="WebsiteMenu">
-              <div class="menu-content">
-                <div class="menu-link" itemprop="links" itemscope itemtype="WebsiteMenuLink"><a href="" itemprop="url">
-                    <div class="menu-link-text">
-                      <div class="menu-link-name" itemprop="name">Link 1</div>
-                      <div class="menu-link-description" itemprop="description">This is Link 1</div>
-                    </div></a></div>
-                <div class="menu-link" itemprop="links" itemscope itemtype="WebsiteMenuLink"><a href="" itemprop="url">
-                    <div class="menu-link-text">
-                      <div class="menu-link-name" itemprop="name">Link 2</div>
-                      <div class="menu-link-description" itemprop="description">This is Link 2</div>
-                    </div></a></div>
-                <div class="menu-link" itemprop="links" itemscope itemtype="WebsiteMenuLink"><a href="" itemprop="url">
-                    <div class="menu-link-text">
-                      <div class="menu-link-name" itemprop="name">Link 1</div>
-                      <div class="menu-link-description" itemprop="description">This is Link 3</div>
-                    </div></a></div>
-              </div>
-            </div>
-            <div class="menu-body { active: &quot;Menu 2&quot; == menuToShow, from-right: slideDirection == &quot;right&quot;, from-left: slideDirection == &quot;left&quot;}" data-menu="Menu 2" itemprop="menus" itemscope itemtype="WebsiteMenu">
-              <div class="menu-content">
-                <div class="menu-link" itemprop="links" itemscope itemtype="WebsiteMenuLink"><a href="" itemprop="url">
-                    <div class="menu-link-text">
-                      <div class="menu-link-name" itemprop="name">Link 1</div>
-                      <div class="menu-link-description" itemprop="description">This is Link 1</div>
-                    </div></a></div>
-                <div class="menu-link" itemprop="links" itemscope itemtype="WebsiteMenuLink"><a href="" itemprop="url">
-                    <div class="menu-link-text">
-                      <div class="menu-link-name" itemprop="name">Link 2</div>
-                      <div class="menu-link-description" itemprop="description">This is Link 2</div>
-                    </div></a></div>
-                <div class="menu-link" itemprop="links" itemscope itemtype="WebsiteMenuLink"><a href="" itemprop="url">
-                    <div class="menu-link-text">
-                      <div class="menu-link-name" itemprop="name">Link 1</div>
-                      <div class="menu-link-description" itemprop="description">This is Link 3</div>
-                    </div></a></div>
-              </div>
-            </div>
+          <div class="menu-bodies" itemprop="menuCollections" itemscope itemtype="WebsiteMenuCollection"><span class="meta-only" itemprop="menus" itemscope itemtype="WebsiteMenu">
+              <meta itemprop="url" content="">
+              <meta itemprop="name" content="Support"></span><span class="meta-only" itemprop="menus" itemscope itemtype="WebsiteMenu">
+              <meta itemprop="url" content="/">
+              <meta itemprop="name" content="Call to Action"></span>
           </div>
           <div class="menu-bodies" itemprop="menuCollections" itemscope itemtype="WebsiteMenuCollection"><span class="meta-only" itemprop="menus" itemscope itemtype="WebsiteMenu">
               <meta itemprop="url" content="">
@@ -126,49 +90,7 @@
         <div class="mobile-menu-content">
           <div class="mobile-menu-wrapper">
             <label class="close-mobile-icon fade-on-hover" for="show-mobile-menu">&#215;</label>
-            <div class="menu-collection" itemprop="menuCollections" itemscope itemtype="WebsiteMenuCollection"><span class="menu" tabindex="0" itemprop="menus" itemscope itemtype="WebsiteMenu">
-                <input type="checkbox" id="menu-1">
-                <label class="menu-title fade-on-hover" for="menu-1">Menu 1</label>
-                <div class="menu-body">
-                  <div class="menu-content">
-                    <div class="menu-link" itemprop="links" itemscope itemtype="WebsiteMenuLink"><a href="" itemprop="url">
-                        <div class="menu-link-text">
-                          <div class="menu-link-name" itemprop="name">Link 1</div>
-                          <div class="menu-link-description" itemprop="description">This is Link 1</div>
-                        </div></a></div>
-                    <div class="menu-link" itemprop="links" itemscope itemtype="WebsiteMenuLink"><a href="" itemprop="url">
-                        <div class="menu-link-text">
-                          <div class="menu-link-name" itemprop="name">Link 2</div>
-                          <div class="menu-link-description" itemprop="description">This is Link 2</div>
-                        </div></a></div>
-                    <div class="menu-link" itemprop="links" itemscope itemtype="WebsiteMenuLink"><a href="" itemprop="url">
-                        <div class="menu-link-text">
-                          <div class="menu-link-name" itemprop="name">Link 1</div>
-                          <div class="menu-link-description" itemprop="description">This is Link 3</div>
-                        </div></a></div>
-                  </div>
-                </div></span><span class="menu" tabindex="0" itemprop="menus" itemscope itemtype="WebsiteMenu">
-                <input type="checkbox" id="menu-2">
-                <label class="menu-title fade-on-hover" for="menu-2">Menu 2</label>
-                <div class="menu-body">
-                  <div class="menu-content">
-                    <div class="menu-link" itemprop="links" itemscope itemtype="WebsiteMenuLink"><a href="" itemprop="url">
-                        <div class="menu-link-text">
-                          <div class="menu-link-name" itemprop="name">Link 1</div>
-                          <div class="menu-link-description" itemprop="description">This is Link 1</div>
-                        </div></a></div>
-                    <div class="menu-link" itemprop="links" itemscope itemtype="WebsiteMenuLink"><a href="" itemprop="url">
-                        <div class="menu-link-text">
-                          <div class="menu-link-name" itemprop="name">Link 2</div>
-                          <div class="menu-link-description" itemprop="description">This is Link 2</div>
-                        </div></a></div>
-                    <div class="menu-link" itemprop="links" itemscope itemtype="WebsiteMenuLink"><a href="" itemprop="url">
-                        <div class="menu-link-text">
-                          <div class="menu-link-name" itemprop="name">Link 1</div>
-                          <div class="menu-link-description" itemprop="description">This is Link 3</div>
-                        </div></a></div>
-                  </div>
-                </div></span>
+            <div class="menu-collection" itemprop="menuCollections" itemscope itemtype="WebsiteMenuCollection"><a class="fade-on-hover" href="" tabindex="0" itemprop="url"><span itemprop="name">Support</span></a><a class="fade-on-hover" href="/" tabindex="0" itemprop="url"><span itemprop="name">Call to Action</span></a>
             </div>
             <div class="menu-collection" itemprop="menuCollections" itemscope itemtype="WebsiteMenuCollection"><a class="fade-on-hover" href="" tabindex="0" itemprop="url"><span itemprop="name">Support</span></a><a class="fade-on-hover" href="/" tabindex="0" itemprop="url"><span itemprop="name">Call to Action</span></a>
             </div>

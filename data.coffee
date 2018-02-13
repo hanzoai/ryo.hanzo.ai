@@ -10,9 +10,9 @@ module.exports =
       logos: [
         {
           '@type': 'WebsiteLogo'
-          # image: '/img/logo.png'
-          # alt: 'YOUR SITE'
-          name: 'YOUR SITE'
+          image: '/img/logo.png'
+          alt: 'HANZO'
+          #name: 'YOUR SITE'
           url: '/'
         }
       ]
@@ -22,122 +22,14 @@ module.exports =
           menus: [
             {
               '@type': 'WebsiteMenu'
-              name: 'Menu 1'
-              links: [
-                {
-                  '@type': 'WebsiteMenuLink'
-                  name: 'Link 1'
-                  description: 'This is Link 1'
-                  # image: '/img/test-rocket.svg'
-                  url: ''
-                }
-                {
-                  '@type': 'WebsiteMenuLink'
-                  name: 'Link 2'
-                  description: 'This is Link 2'
-                  # image: '/img/test-rocket.svg'
-                  url: ''
-                }
-                {
-                  '@type': 'WebsiteMenuLink'
-                  name: 'Link 1'
-                  description: 'This is Link 3'
-                  # image: '/img/test-rocket.svg'
-                  url: ''
-                }
-              ]
+              name: 'Support'
+              url: ''
             }
             {
               '@type': 'WebsiteMenu'
-              name: 'Menu 2'
-              links: [
-                {
-                  '@type': 'WebsiteMenuLink'
-                  name: 'Link 1'
-                  description: 'This is Link 1'
-                  # image: '/img/test-rocket.svg'
-                  url: ''
-                }
-                {
-                  '@type': 'WebsiteMenuLink'
-                  name: 'Link 2'
-                  description: 'This is Link 2'
-                  # image: '/img/test-rocket.svg'
-                  url: ''
-                }
-                {
-                  '@type': 'WebsiteMenuLink'
-                  name: 'Link 1'
-                  description: 'This is Link 3'
-                  # image: '/img/test-rocket.svg'
-                  url: ''
-                }
-              ]
+              name: 'Call to Action'
+              url: '/'
             }
-      #       {
-      #         '@type': 'WebsiteMenu'
-      #         name: 'Developers'
-      #         links: [
-      #           {
-      #             '@type': 'WebsiteMenuLink'
-      #             name: 'API'
-      #             # image: '/img/test-rocket.svg'
-      #             url: 'https://docs.hanzo.io/reference'
-      #           }
-      #           {
-      #             '@type': 'WebsiteMenuLink'
-      #             name: 'Javascript SDK'
-      #             # image: '/img/test-rocket.svg'
-      #             url: 'https://github.com/hanzo-io/hanzo.js'
-      #           }
-      #           {
-      #             '@type': 'WebsiteMenuLink'
-      #             name: 'Open Source'
-      #             # image: '/img/test-rocket.svg'
-      #             url: 'https://github.com/hanzo-io/'
-      #           }
-      #         ]
-      #       }
-      #       {
-      #         '@type': 'WebsiteMenu'
-      #         name: 'Company'
-      #         links: [
-      #           {
-      #             '@type': 'WebsiteMenuLink'
-      #             name: 'Team'
-      #             # image: '/img/test-rocket.svg'
-      #             url: '#'
-      #           }
-      #           {
-      #             '@type': 'WebsiteMenuLink'
-      #             name: 'Press'
-      #             # image: '/img/test-rocket.svg'
-      #             url: '#'
-      #           }
-      #           {
-      #             '@type': 'WebsiteMenuLink'
-      #             name: 'Partners'
-      #             # image: '/img/test-rocket.svg'
-      #             url: '#'
-      #           }
-      #           {
-      #             '@type': 'WebsiteMenuLink'
-      #             name: 'Careers'
-      #             # image: '/img/test-rocket.svg'
-      #             url: '#'
-      #           }
-      #           {
-      #             '@type': 'WebsiteMenuLink'
-      #             name: 'Contact'
-      #             url: '#'
-      #           }
-      #         ]
-      #       }
-      #       # {
-      #       #   '@type': 'WebsiteMenu'
-      #       #   name: 'Pricing'
-      #       #   url: '#'
-      #       # }
           ]
         }
         {
