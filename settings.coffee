@@ -17,6 +17,7 @@ facebook =
   username: ''
 
 module.exports =
+  id: 'alphietreats'
   site:
     title:     name
     name:      name
@@ -47,6 +48,5 @@ module.exports =
     googlePlus:
       shareLink: 'https://plus.google.com/share?url=' + encodeURIComponent url
 
-  id: 'yoursite'
   version: (new Date()).getTime()
 

@@ -1,0 +1,89 @@
+#index ~
+  main
+    h1
+      font-weight: bold
+      color: $hanzoGreen
+
+    .hero
+      .button
+      button
+        width: 100%
+        text-align: center
+        height: 6rem
+        line-height: 6rem
+        margin: $spacing
+
+        &.demo
+          background-color: $hanzoPurple
+
+          &:after
+            content: ''
+            width: 1.5rem
+            height: 1.5rem
+            display: block
+            position: absolute
+            right: $spacing * 2rem
+            top: $spacing * 4.5rem
+            background-image: url(/img/arrow-right-white.svg)
+            background-repeat: no-repeat
+
+        &.whitepaper
+          background-color: $white
+          color: $hanzoPurple
+          overflow: hidden
+          filter: none
+
+          &:before
+            content: ''
+            width: 6rem
+            height: 6rem
+            display: block
+            position: absolute
+            left: $spacing * 2
+            top: $spacing * 2
+            background-image: url(/img/whitepaper-button-icon.svg)
+            background-repeat: no-repeat
+
+          &:after
+            content: ''
+            width: 1.5rem
+            height: 1.5rem
+            display: block
+            position: absolute
+            right: $spacing * 2rem
+            top: $spacing * 4.5rem
+            background-image: url(/img/arrow-right-purple.svg)
+            background-repeat: no-repeat
+
+    +below($phoneWidth)
+      .hero
+        .column1
+          padding-top: 20vh
+        & > *
+          padding: 0
+
+    .left-bg
+      background-color: $hanzoIndigo
+      position: absolute
+      left: 0
+      top: 0
+      height: 100%
+      width 65vw
+      z-index: -1
+
+    .right-bg
+      background-color: $hanzoGreen
+      position: absolute
+      right: 0
+      top: 0
+      height: 100%
+      width 35vw
+      z-index: -1
+
+    +below($tabletWidth)
+      .left-bg
+        width 100vw
+
+      .right-bg
+        width 0vw
+

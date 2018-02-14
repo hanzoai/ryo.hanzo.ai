@@ -64,24 +64,26 @@
     <header>
       <header-menu-complex class="nav complex-menus" itemscope itemtype="WebsiteHeader">
         <meta itemprop="type" content="complex">
-        <div class="left logos"><a class="logo-link" href="/" itemprop="logos" itemscope itemtype="WebsiteLogo"><img class="logo-image" src="/img/logo.png" alt="HANZO" itemprop="image"></a>
+        <div class="left logos"><a class="logo-link" href="/" itemprop="logos" itemscope itemtype="WebsiteLogo"><img class="logo-image" src="/img/logo.svg" alt="HANZO" itemprop="image"></a>
         </div>
-        <div class="right secondary"><a class="fade-on-hover" href="" tabindex="0">Support</a><a class="fade-on-hover" href="/" tabindex="0">Call to Action</a>
+        <div class="right secondary"><a class="fade-on-hover" href="" tabindex="0">Whitepaper</a><a class="fade-on-hover" href="" tabindex="0">Demo</a>
         </div>
-        <div class="center primary"><a class="fade-on-hover" href="" tabindex="0">Support</a><a class="fade-on-hover" href="/" tabindex="0">Call to Action</a>
+        <div class="center primary"><a class="fade-on-hover" href="#how-it-works" tabindex="0">How It Works</a><a class="fade-on-hover" href="#benefits" tabindex="0">Benefits</a><a class="fade-on-hover" href="#about-us" tabindex="0">About Us</a>
         </div>
         <div class="menu-wrapper { active: menuToShow }" onmouseleave="{ hideMenu }">
           <div class="menu-bodies" itemprop="menuCollections" itemscope itemtype="WebsiteMenuCollection"><span class="meta-only" itemprop="menus" itemscope itemtype="WebsiteMenu">
-              <meta itemprop="url" content="">
-              <meta itemprop="name" content="Support"></span><span class="meta-only" itemprop="menus" itemscope itemtype="WebsiteMenu">
-              <meta itemprop="url" content="/">
-              <meta itemprop="name" content="Call to Action"></span>
+              <meta itemprop="url" content="#how-it-works">
+              <meta itemprop="name" content="How It Works"></span><span class="meta-only" itemprop="menus" itemscope itemtype="WebsiteMenu">
+              <meta itemprop="url" content="#benefits">
+              <meta itemprop="name" content="Benefits"></span><span class="meta-only" itemprop="menus" itemscope itemtype="WebsiteMenu">
+              <meta itemprop="url" content="#about-us">
+              <meta itemprop="name" content="About Us"></span>
           </div>
           <div class="menu-bodies" itemprop="menuCollections" itemscope itemtype="WebsiteMenuCollection"><span class="meta-only" itemprop="menus" itemscope itemtype="WebsiteMenu">
               <meta itemprop="url" content="">
-              <meta itemprop="name" content="Support"></span><span class="meta-only" itemprop="menus" itemscope itemtype="WebsiteMenu">
-              <meta itemprop="url" content="/">
-              <meta itemprop="name" content="Call to Action"></span>
+              <meta itemprop="name" content="Whitepaper"></span><span class="meta-only" itemprop="menus" itemscope itemtype="WebsiteMenu">
+              <meta itemprop="url" content="">
+              <meta itemprop="name" content="Demo"></span>
           </div>
         </div>
       </header-menu-complex>
@@ -90,9 +92,9 @@
         <div class="mobile-menu-content">
           <div class="mobile-menu-wrapper">
             <label class="close-mobile-icon fade-on-hover" for="show-mobile-menu">&#215;</label>
-            <div class="menu-collection" itemprop="menuCollections" itemscope itemtype="WebsiteMenuCollection"><a class="fade-on-hover" href="" tabindex="0" itemprop="url"><span itemprop="name">Support</span></a><a class="fade-on-hover" href="/" tabindex="0" itemprop="url"><span itemprop="name">Call to Action</span></a>
+            <div class="menu-collection" itemprop="menuCollections" itemscope itemtype="WebsiteMenuCollection"><a class="fade-on-hover" href="#how-it-works" tabindex="0" itemprop="url"><span itemprop="name">How It Works</span></a><a class="fade-on-hover" href="#benefits" tabindex="0" itemprop="url"><span itemprop="name">Benefits</span></a><a class="fade-on-hover" href="#about-us" tabindex="0" itemprop="url"><span itemprop="name">About Us</span></a>
             </div>
-            <div class="menu-collection" itemprop="menuCollections" itemscope itemtype="WebsiteMenuCollection"><a class="fade-on-hover" href="" tabindex="0" itemprop="url"><span itemprop="name">Support</span></a><a class="fade-on-hover" href="/" tabindex="0" itemprop="url"><span itemprop="name">Call to Action</span></a>
+            <div class="menu-collection" itemprop="menuCollections" itemscope itemtype="WebsiteMenuCollection"><a class="fade-on-hover" href="" tabindex="0" itemprop="url"><span itemprop="name">Whitepaper</span></a><a class="fade-on-hover" href="" tabindex="0" itemprop="url"><span itemprop="name">Demo</span></a>
             </div>
           </div>
         </div>
@@ -100,10 +102,13 @@
     </header>
     <main>
       <hero class="hero columns">
+        <div class="left-bg"></div>
+        <div class="right-bg"></div>
         <div class="content column1">
-          <h1>YOUR SITE</h1>
-          <h3>It can sell things online</h3>
+          <h1>Introducing Ethical Token Sales</h1>
+          <p>Hanzo repairs the broken relationship between creators and backers by re-writing the social contract of crowdfunding - through smart contracts.</p>
         </div>
+        <div class="content"><a class="button demo">SEE THE DEMO</a><a class="button whitepaper">READ THE WHITE PAPER</a></div>
       </hero>
     </main>
     <footer>
@@ -166,7 +171,7 @@
       r,n,c,i,o,s,l,u;if(null==t.analytics){for(r=[],r.methods=["ab","alias","group","identify","off","on","once","page","pageview","ready","track","trackClick","trackForm","trackLink","trackSubmit"],l=r.methods,c=function(t){r[t]=function(){var
       e;return
       e=Array.prototype.slice.call(arguments),e.unshift(t),r.push(e),r}},i=0,o=l.length;o>i;i++)s=l[i],c(s);return
-      u=e.createElement("script"),u.async=!0,u.type="text/javascript",u.src=a,n=e.getElementsByTagName("script")[0],n.parentNode.insertBefore(u,n),t.analytics=r}}(window,document,"//cdn.hanzo.io/a/yoursite.js");
+      u=e.createElement("script"),u.async=!0,u.type="text/javascript",u.src=a,n=e.getElementsByTagName("script")[0],n.parentNode.insertBefore(u,n),t.analytics=r}}(window,document,"//cdn.hanzo.io/a/alphietreats.js");
     </script>
   </body>
 </html>

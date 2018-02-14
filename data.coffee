@@ -10,7 +10,7 @@ module.exports =
       logos: [
         {
           '@type': 'WebsiteLogo'
-          image: '/img/logo.png'
+          image: '/img/logo.svg'
           alt: 'HANZO'
           #name: 'YOUR SITE'
           url: '/'
@@ -22,13 +22,18 @@ module.exports =
           menus: [
             {
               '@type': 'WebsiteMenu'
-              name: 'Support'
-              url: ''
+              name: 'How It Works'
+              url: '#how-it-works'
             }
             {
               '@type': 'WebsiteMenu'
-              name: 'Call to Action'
-              url: '/'
+              name: 'Benefits'
+              url: '#benefits'
+            }
+            {
+              '@type': 'WebsiteMenu'
+              name: 'About Us'
+              url: '#about-us'
             }
           ]
         }
@@ -37,71 +42,71 @@ module.exports =
           menus: [
             {
               '@type': 'WebsiteMenu'
-              name: 'Support'
+              name: 'Whitepaper'
               url: ''
             }
             {
               '@type': 'WebsiteMenu'
-              name: 'Call to Action'
-              url: '/'
+              name: 'Demo'
+              url: ''
             }
           ]
         }
       ]
     }
-    main: [
-      {
-        '@type': 'WebsiteSection'
-        content: [
-          {
-            '@type': 'WebsiteText'
-            text: 'Put your business on autopilot'
-            level: 'h1'
-          }
-          {
-            '@type': 'WebsiteLink'
-            class: 'button'
-            text: 'JOIN THE BETA +'
-            url: '#'
-          }
-          {
-            '@type': 'WebsiteLink'
-            class: 'button important'
-            text: 'CHECK OUR DOCS >'
-            url: '#'
-          }
-          {
-            '@type': 'WebsiteImage'
-            class: 'bg-stars'
-            src: '/img/stars.svg'
-          }
-        ]
-      }
-      {
-        '@type': 'WebsiteSection'
-        class: 'scale-your-business'
-        content: [
-          {
-            '@type': 'WebsiteImage'
-            class: 'phone-bb'
-            src: '/img/3diphone_bb_final.png'
-            alt: 'Bellabeat'
-          }
-          {
-            '@type': 'WebsiteImage'
-            class: 'phone-kanoa'
-            src: '/img/3diphone_kanoa_final.png'
-            alt: 'KANOA'
-          }
-          {
-            '@type': 'WebsiteImage'
-            class: 'phone-kanoa'
-            src: '/img/3diphone_stoned_final.png'
-            alt: 'Stoned Audio'
-          }
-        ]
-      }
-    ]
+    # main: [
+    #   {
+    #     '@type': 'WebsiteSection'
+    #     content: [
+    #       {
+    #         '@type': 'WebsiteText'
+    #         text: 'Put your business on autopilot'
+    #         level: 'h1'
+    #       }
+    #       {
+    #         '@type': 'WebsiteLink'
+    #         class: 'button'
+    #         text: 'JOIN THE BETA +'
+    #         url: '#'
+    #       }
+    #       {
+    #         '@type': 'WebsiteLink'
+    #         class: 'button important'
+    #         text: 'CHECK OUR DOCS >'
+    #         url: '#'
+    #       }
+    #       {
+    #         '@type': 'WebsiteImage'
+    #         class: 'bg-stars'
+    #         src: '/img/stars.svg'
+    #       }
+    #     ]
+    #   }
+    #   {
+    #     '@type': 'WebsiteSection'
+    #     class: 'scale-your-business'
+    #     content: [
+    #       {
+    #         '@type': 'WebsiteImage'
+    #         class: 'phone-bb'
+    #         src: '/img/3diphone_bb_final.png'
+    #         alt: 'Bellabeat'
+    #       }
+    #       {
+    #         '@type': 'WebsiteImage'
+    #         class: 'phone-kanoa'
+    #         src: '/img/3diphone_kanoa_final.png'
+    #         alt: 'KANOA'
+    #       }
+    #       {
+    #         '@type': 'WebsiteImage'
+    #         class: 'phone-kanoa'
+    #         src: '/img/3diphone_stoned_final.png'
+    #         alt: 'Stoned Audio'
+    #       }
+    #     ]
+    #   }
+    # ]
     footer: {
       '@type': 'WebsiteFooter'
       logos: [
