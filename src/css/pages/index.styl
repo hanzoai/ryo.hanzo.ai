@@ -101,19 +101,14 @@
           width 0vw
 
     #how-it-works
+      z-index: 1
+      box-shadow: 1px 2px 1px 0.5px $shadowColor1
+
       h1
       h3
         color: $hanzoIndigo
 
-      .bg
-        &:before
-          background-color: $white
-
       .column1
-        color: #263238
-        flex: 2
-        padding-right: $spacing * 6
-
         p
           display: flex
 
@@ -127,10 +122,6 @@
               flex: 0 0 3rem
 
       .column2
-        flex: 1
-        padding-left: $spacing * 6
-        text-align: right
-
         p
           color: #263238
 
@@ -143,14 +134,26 @@
         .column1
           padding-right: 0
 
-    .content.green-shrink
+    .white-green-bg
+      &:before
+        background-color: $white
+
+    .white-column
+      color: #263238
+      flex: 2
+      padding-right: $spacing * 6
+
+    .green-column
+      flex: 1
+      padding-left: $spacing * 8
+      text-align: right
+
       +below($tabletWidth)
         // Simulate the entire content area being green
         background-color: $hanzoGreen
         margin-top: -10vh
         margin-left: -4 * $spacing
         margin-right: -4 * $spacing
-        margin-top: -15vh
         padding-left: 4 * $spacing
         padding-right: 4 * $spacing
 
@@ -158,8 +161,6 @@
       background-color: $grey200
 
       .column1
-        padding-top: 0
-
         .card
           background-color: $white
           color: $indigo800
@@ -221,3 +222,117 @@
       +below($tabletWidth)
         flex-direction: column-reverse
 
+    #team
+      $memberSpacing = 2 * $spacing
+
+      & > *
+        justify-content: flex-start
+
+      h1
+      h3
+        color: $hanzoIndigo
+
+      .column1
+        color: $hanzoIndigo
+        align-self: flex-start
+
+        .teams
+          display: flex
+          flex-wrap: wrap
+          margin: -1 * $memberSpacing
+
+          .member
+            flex: 0 0 'calc(25% - %s)' % (2 * $memberSpacing)
+            margin: $memberSpacing
+
+            img
+              border-radius: 50%
+
+            p
+              margin: 0
+
+            +below($shrinkWidth)
+              flex: 0 0 'calc(33% - %s)' % (2 * $memberSpacing)
+
+            +below($tabletWidth)
+              flex: 0 0 'calc(50% - %s)' % (2 * $memberSpacing)
+
+      .column2
+        align-self: flex-start
+
+        .advisors
+          display: flex
+          flex-direction: row
+
+          .advisor
+            border-radius: 2px
+
+      +below($tabletWidth)
+        .column1
+          padding-right: 0
+
+        .column2
+          align-self:stretch
+
+          .advisor
+            width: 100%
+
+            img
+              width: 100%
+
+    #token-sale
+      background-color: $hanzoIndigo
+
+      .content
+        flex: auto
+
+        h1
+          margin-bottom: 0
+
+        .infos
+          padding: 4 * $spacing 0
+          flex-wrap: wrap
+
+          .info
+            h3
+              color: $hanzoPink
+
+            +below($shrinkWidth)
+              flex: 0 0 50%
+
+          +below($tabletWidth)
+            align-items: flex-start
+            justify-content: flex-start
+
+        a
+          color: $hanzoPurple
+          text-decoration: none
+          display: flex
+          justify-content: flex-start
+          align-items: center
+
+          h4
+            margin: 0 $spacing 0 0
+
+      .column2
+        .sale-graph
+          width: 250px
+          margin: 0 $spacing * 4
+          position: relative
+
+          img
+            width: 100%
+
+          p
+            width: 100%
+            position: absolute
+            text-align: center
+
+            &.total
+              margin-top: $spacing * 2
+              top: 0
+              color: $hanzoGreen
+
+            &.percent
+              margin-top: $spacing * 2
+              top: 25%

@@ -606,11 +606,6 @@ hero,
   padding-top:20vh;
   padding-bottom:15vh;
 }
-section,
-.section{
-  padding-top:10vh;
-  padding-bottom:15vh;
-}
 .full{
   height:105vh;
   min-height:600px;
@@ -687,6 +682,7 @@ button.important,
   width:100%;
   padding:1.5rem;
   box-shadow:1px 2px 1px 0.5px rgba(0,0,0,0.2);
+  border-radius:2px;
 }
 .card:first-child{
   margin-top:0;
@@ -701,10 +697,7 @@ button.important,
 .fade-on-hover:hover{
   opacity:0.6;
 }
-.columns{
-  padding-bottom:0;
-}
-.columns > *{
+section.columns > *{
   padding:10vh 0 15vh;
 }
 .button,
@@ -824,17 +817,13 @@ footer *{
   height:100%;
   width:35vw;
 }
+#index main #how-it-works{
+  z-index:1;
+  box-shadow:1px 2px 1px 0.5px rgba(0,0,0,0.2);
+}
 #index main #how-it-works h1,
 #index main #how-it-works h3{
   color:#022357;
-}
-#index main #how-it-works .bg:before{
-  background-color:#fff;
-}
-#index main #how-it-works .column1{
-  color:#263238;
-  flex:2;
-  padding-right:3rem;
 }
 #index main #how-it-works .column1 p{
   display:flex;
@@ -848,19 +837,24 @@ footer *{
 #index main #how-it-works .column1 p > *:first-child{
   flex:0 0 3rem;
 }
-#index main #how-it-works .column2{
-  flex:1;
-  padding-left:3rem;
-  text-align:right;
-}
 #index main #how-it-works .column2 p{
   color:#263238;
 }
+#index main .white-green-bg:before{
+  background-color:#fff;
+}
+#index main .white-column{
+  color:#263238;
+  flex:2;
+  padding-right:3rem;
+}
+#index main .green-column{
+  flex:1;
+  padding-left:4rem;
+  text-align:right;
+}
 #index main #cutting-edge{
   background-color:#eee;
-}
-#index main #cutting-edge .column1{
-  padding-top:0;
 }
 #index main #cutting-edge .column1 .card{
   background-color:#fff;
@@ -913,6 +907,90 @@ footer *{
 }
 #index main #cutting-edge .column2 a h4{
   margin:0 0.5rem 0 0;
+}
+#index main #team > *{
+  justify-content:flex-start;
+}
+#index main #team h1,
+#index main #team h3{
+  color:#022357;
+}
+#index main #team .column1{
+  color:#022357;
+  align-self:flex-start;
+}
+#index main #team .column1 .teams{
+  display:flex;
+  flex-wrap:wrap;
+  margin:-1rem;
+}
+#index main #team .column1 .teams .member{
+  flex:0 0 calc(25% - 2rem);
+  margin:1rem;
+}
+#index main #team .column1 .teams .member img{
+  border-radius:50%;
+}
+#index main #team .column1 .teams .member p{
+  margin:0;
+}
+#index main #team .column2{
+  align-self:flex-start;
+}
+#index main #team .column2 .advisors{
+  display:flex;
+  flex-direction:row;
+}
+#index main #team .column2 .advisors .advisor{
+  border-radius:2px;
+}
+#index main #token-sale{
+  background-color:#022357;
+}
+#index main #token-sale .content{
+  flex:auto;
+}
+#index main #token-sale .content h1{
+  margin-bottom:0;
+}
+#index main #token-sale .content .infos{
+  padding:2rem 0;
+  flex-wrap:wrap;
+}
+#index main #token-sale .content .infos .info h3{
+  color:#fe98b0;
+}
+#index main #token-sale .content a{
+  color:#b17be0;
+  text-decoration:none;
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+}
+#index main #token-sale .content a h4{
+  margin:0 0.5rem 0 0;
+}
+#index main #token-sale .column2 .sale-graph{
+  width:250px;
+  margin:0 2rem;
+  position:relative;
+}
+#index main #token-sale .column2 .sale-graph img{
+  width:100%;
+}
+#index main #token-sale .column2 .sale-graph p{
+  width:100%;
+  position:absolute;
+  text-align:center;
+}
+#index main #token-sale .column2 .sale-graph p.total{
+  margin-top:1rem;
+  top:0;
+  color:#1de2a0;
+}
+#index main #token-sale .column2 .sale-graph p.percent{
+  margin-top:1rem;
+  top:25%;
 }
 @media only screen and (max-width: 650px){
   h1{
@@ -1016,6 +1094,9 @@ footer *{
   .full{
     height:auto;
   }
+  .hero{
+    padding-bottom:15vh;
+  }
   .hero.columns > *{
     padding:0;
   }
@@ -1040,12 +1121,11 @@ footer *{
   #index main #how-it-works .column1{
     padding-right:0;
   }
-  #index main .content.green-shrink{
+  #index main .green-column{
     background-color:#1de2a0;
     margin-top:-10vh;
     margin-left:-2rem;
     margin-right:-2rem;
-    margin-top:-15vh;
     padding-left:2rem;
     padding-right:2rem;
   }
@@ -1054,5 +1134,32 @@ footer *{
   }
   #index main #cutting-edge{
     flex-direction:column-reverse;
+  }
+  #index main #team .column1 .teams .member{
+    flex:0 0 calc(50% - 2rem);
+  }
+  #index main #team .column1{
+    padding-right:0;
+  }
+  #index main #team .column2{
+    align-self:stretch;
+  }
+  #index main #team .column2 .advisor{
+    width:100%;
+  }
+  #index main #team .column2 .advisor img{
+    width:100%;
+  }
+  #index main #token-sale .content .infos{
+    align-items:flex-start;
+    justify-content:flex-start;
+  }
+}
+@media only screen and (max-width: 1000px){
+  #index main #team .column1 .teams .member{
+    flex:0 0 calc(33% - 2rem);
+  }
+  #index main #token-sale .content .infos .info{
+    flex:0 0 50%;
   }
 }/*# sourceMappingURL=app.css.map */

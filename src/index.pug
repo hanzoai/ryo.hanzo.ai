@@ -19,8 +19,8 @@ block content
         span READ THE WHITE PAPER
 
   section#how-it-works.columns
-    .bg
-    .content.column1
+    .bg.white-green-bg
+    .content.column1.white-column
       h1 How it works
       p
         img(src='/img/how-it-works-goals.svg')
@@ -37,7 +37,7 @@ block content
       p
         img(src='/img/how-it-works-win.svg')
         span Successful creators are able to build and grow their business on Hanzo even after their crowdfunding campaign is over, so the community they have built stays with them as they grow their company.
-    .content.column2.green-shrink
+    .content.column2.green-column
       h3 Who wins and how?
       h4 CREATORS
       p Creators have access to the most powerful analytics and marketing tools available to crowdfunded products. They are able to leverage these tools and the new, more transparent relationship with backers to build a community that has real buy-in to what they are building.
@@ -58,7 +58,6 @@ block content
         img(src='/img/access-marketing.svg')
         h4 MARKETING
         p Hanzo Marketing gives you the most powerful tools to build your community. We have tools for ad management, referrals marketing, influencer marketing and much more.
-
     .content.column2
       h1 Access Hanzo’s cutting&#8209;edge platform
       p Launch your campaign on the most sophisticated crowdfunding platform. We give you the tools to turn your crowdfunded product into a lasting business.
@@ -72,6 +71,76 @@ block content
       a(href='//hanzo.ai')
         h4 VISIT HANZO
         img(src='/img/arrow-right-purple.svg')
+
+  section#team.columns
+    .bg.white-green-bg
+    .content.column1.white-column
+      h1 Our Team
+      .teams
+        .member
+          img(src='/img/team-zach.png')
+          p ZACH KELLING
+          p CEO
+        .member
+          img(src='/img/team-david.png')
+          p DAVID TAI
+          p CTO
+        .member
+          img(src='/img/team-tim.png')
+          p TORI BENSON
+          p COO
+        .member
+          img(src='/img/team-tim.png')
+          p TIM MESSER
+          p Chief Evangelist
+        .member
+          img(src='/img/team-kirby.png')
+          p KIRBY CHAMBLIN
+          p VP Design
+        .member
+          img(src='/img/team-chip.jpg')
+          p CHIP
+          p Chip
+        .member
+          img(src='/img/team-quincy.jpg')
+          p QUINCY
+          p Our 6th President
+        .member
+          img(src='/img/team-truman.jpg')
+          p TRUMAN
+          p Cute Cat
+    .content.column2.green-column
+      h3 Advisors
+      .advisors
+        .advisor
+          img(src='/img/advisors-lisa.png')
+          h4 LISA GANSKY
+
+  section#token-sale.columns
+    .content.column1
+      h1 Token Sale
+      .infos.columns
+        .info
+          h3 Nov 1, 2017
+          h4 STARTED
+        .info
+          h3 10K ETH
+          h4 RAISED
+        .info
+          h3 5000
+          h4 PARTICIPANTS
+        .info
+          h3 1 Billion RYO
+          h4 Token Distribution
+      p 1,000,000,000 RYO tokens will be divided and distributed amongst all participants after the contribution period ends. Each participant will receive an allocation proportional to the amount they contributed, relative to the total collected.
+      a(href='//hanzo.ai')
+        h4 CONTRIBUTION TERMS
+        img(src='/img/arrow-right-purple.svg')
+    .content.column2
+      .sale-graph
+        img(src='/img/token-sale-graph.svg')
+        p.total 100K ETH CAP
+        p.percent 75K ETH
 
 block script
   include _script.pug
