@@ -1,14 +1,17 @@
 .columns
+  padding-bottom: 0
+
   & > *
     padding: 10vh 0 15vh
 
 +below($tabletWidth)
   .hero
-    padding: 20vh $spacing * 4 10vh
-
     &.columns
       & > *
         padding: 0
+
+  section
+    min-height: auto
 
   .columns
     flex-direction: column

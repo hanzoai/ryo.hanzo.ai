@@ -1,13 +1,10 @@
 extends /astley.js/src/templates/layout.pug
 
 block style
-  link(
-    href="https://fonts.googleapis.com/css?family=Teko:400"
-    rel="stylesheet"
-    )
+  include _style.pug
 
-block pageId
-  #index
+block vars
+  - var pageId = 'index'
 
 block content
   hero.hero.columns
@@ -48,16 +45,36 @@ block content
       p Backers get to continue supporting products they are excited about, but without the fear of big failures down the line. They are also brought into details about the development that they wouldn’t otherwise get, which only serves to build their support and excitement about the product.
 
   section#cutting-edge.columns
+    .content.column1
+      .card
+        img(src='/img/access-commerce.svg')
+        h4 COMMERCE
+        p Hanzo Commerce allows you to build a brand right from your crowdfunding page.  Communicate with backers and customers your way, our ecommerce site grows with your company so when your campaign is done you’re left with a business, not just a CSV file.
+      .card
+        img(src='/img/access-analytics.svg')
+        h4 ANALYTICS
+        p Hanzo Analytics give you actionable insight into your potential backers and customers, and feeds directly into our marketing tools.
+      .card
+        img(src='/img/access-marketing.svg')
+        h4 MARKETING
+        p Hanzo Marketing gives you the most powerful tools to build your community. We have tools for ad management, referrals marketing, influencer marketing and much more.
 
+    .content.column2
+      h1 Access Hanzo’s cutting&#8209;edge platform
+      p Launch your campaign on the most sophisticated crowdfunding platform. We give you the tools to turn your crowdfunded product into a lasting business.
+      p
+        img(src='/img/cutting-edge-money.svg')
+        span $50 MILLION IN PRE-ORDERS
+      p
+        img(src='/img/cutting-edge-end-to-end.svg')
+        span END-TO-END SOLUTION
+
+      a(href='//hanzo.ai')
+        h4 VISIT HANZO
+        img(src='/img/arrow-right-purple.svg')
 
 block script
-  script(src='/js/app.js?v=#{ version }')
+  include _script.pug
 
 block analytics
-  script.
-    !function(t,e,a){var
-    r,n,c,i,o,s,l,u;if(null==t.analytics){for(r=[],r.methods=["ab","alias","group","identify","off","on","once","page","pageview","ready","track","trackClick","trackForm","trackLink","trackSubmit"],l=r.methods,c=function(t){r[t]=function(){var
-    e;return
-    e=Array.prototype.slice.call(arguments),e.unshift(t),r.push(e),r}},i=0,o=l.length;o>i;i++)s=l[i],c(s);return
-    u=e.createElement("script"),u.async=!0,u.type="text/javascript",u.src=a,n=e.getElementsByTagName("script")[0],n.parentNode.insertBefore(u,n),t.analytics=r}}(window,document,"//cdn.hanzo.io/a/#{ id }.js");
-
+  include _analytics.pug

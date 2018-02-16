@@ -1,4 +1,4 @@
-#index ~
+#index
   main
     h1
       color: $hanzoGreen
@@ -144,9 +144,80 @@
           padding-right: 0
 
     .content.green-shrink
-      // Simulate the entire content area being green
-      background-color: $hanzoGreen
-      margin-left: -2 * $spacing
-      margin-right: -2 * $spacing
-      padding-left: 4 * $spacing
-      padding-right: 4 * $spacing
+      +below($tabletWidth)
+        // Simulate the entire content area being green
+        background-color: $hanzoGreen
+        margin-top: -10vh
+        margin-left: -4 * $spacing
+        margin-right: -4 * $spacing
+        margin-top: -15vh
+        padding-left: 4 * $spacing
+        padding-right: 4 * $spacing
+
+    #cutting-edge
+      background-color: $grey200
+
+      .column1
+        padding-top: 0
+
+        .card
+          background-color: $white
+          color: $indigo800
+          font-size: 1rem
+
+          p
+            margin: 0
+
+          &:nth-child(1)
+            h4
+              color: #1DE2A0
+              margin-top: $spacing
+
+          &:nth-child(2)
+            h4
+              color: #4A90E2
+              margin-top: $spacing
+
+          &:nth-child(3)
+            h4
+              color: #B17BE0
+              margin-top: $spacing
+
+      .column2
+        h1
+          color: $hanzoIndigo
+
+        text-align: right
+        color: #263238
+        padding-left: $spacing * 4
+
+        +below($tabletWidth)
+          padding-left: 0
+
+        p
+          display: flex
+          justify-content: flex-end
+          align-items: center
+
+          & > *
+            display: inline-block
+
+            &:last-child
+              margin-left: $spacing
+
+            &:first-child
+              flex: 0 0 3rem
+
+        a
+          color: $hanzoPurple
+          text-decoration: none
+          display: flex
+          justify-content: flex-end
+          align-items: center
+
+          h4
+            margin: 0 $spacing 0 0
+
+      +below($tabletWidth)
+        flex-direction: column-reverse
+
