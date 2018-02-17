@@ -1,11 +1,11 @@
 url = 'https://hanzo.ai'
 
 name = """
-  Your Site
+  Hanzo ICO
   """
 
 description = """
-  YOUR SITE - Your new ecommerce site
+  Hanzo ICO - Your new ecommerce site
   """
 
 twitter =
@@ -17,7 +17,7 @@ facebook =
   username: ''
 
 module.exports =
-  id: 'alphietreats'
+  id: 'hanzo-ico'
   site:
     title:     name
     name:      name

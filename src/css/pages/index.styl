@@ -251,10 +251,12 @@
             p
               margin: 0
 
-            +below($shrinkWidth)
+          +below($shrinkWidth)
+            .member
               flex: 0 0 'calc(33% - %s)' % (2 * $memberSpacing)
 
-            +below($tabletWidth)
+          +below($tabletWidth)
+            .member.member
               flex: 0 0 'calc(50% - %s)' % (2 * $memberSpacing)
 
       .column2

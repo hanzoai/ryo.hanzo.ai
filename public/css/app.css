@@ -717,10 +717,14 @@ header .menu-bodies *{
   color:#000;
 }
 footer{
-  background-color:#424242;
+  background-color:#fff;
+  padding-top:0;
 }
-footer *{
-  color:#fff;
+footer .footer-small-print{
+  margin-bottom:1rem;
+}
+footer .footer-small-print .copyright{
+  color:#022357;
 }
 #index main h1{
   color:#1de2a0;
@@ -1135,7 +1139,7 @@ footer *{
   #index main #cutting-edge{
     flex-direction:column-reverse;
   }
-  #index main #team .column1 .teams .member{
+  #index main #team .column1 .teams .member.member{
     flex:0 0 calc(50% - 2rem);
   }
   #index main #team .column1{

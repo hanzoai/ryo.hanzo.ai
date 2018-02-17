@@ -1,4 +1,4 @@
 import init from 'astley.js/src'
 
-init 'yousite'
+init 'hanzo-ico'
 

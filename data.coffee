@@ -11,7 +11,7 @@ module.exports =
         {
           '@type': 'WebsiteLogo'
           image: '/img/logo.svg'
-          alt: 'HANZO'
+          alt: 'Hanzo'
           #name: 'YOUR SITE'
           url: '/'
         }
@@ -119,77 +119,76 @@ module.exports =
         # }
         {
           '@type': 'WebsiteLogo'
-          image: 'http://hanzo.ai/img/logo.png'
-          alt: 'Powered by Hanzo'
-          name: 'Powered by Hanzo'
+          image: '/img/logo-dark.svg'
+          alt: 'Hanzo'
           url: 'http://www.hanzo.ai'
         }
       ]
-      menuCollections: [
-        {
-          '@type': 'WebsiteMenuCollection'
-          menus: [
-            {
-              '@type': 'WebsiteMenu'
-              name: 'Menu 1'
-              links: [
-                {
-                  '@type': 'WebsiteMenuLink'
-                  name: 'Link 1'
-                  description: 'This is Link 1'
-                  # image: '/img/test-rocket.svg'
-                  url: ''
-                }
-                {
-                  '@type': 'WebsiteMenuLink'
-                  name: 'Link 2'
-                  description: 'This is Link 2'
-                  # image: '/img/test-rocket.svg'
-                  url: ''
-                }
-                {
-                  '@type': 'WebsiteMenuLink'
-                  name: 'Link 3'
-                  description: 'This is Link 3'
-                  # image: '/img/test-rocket.svg'
-                  url: ''
-                }
-              ]
-            }
-          ]
-        }
-        {
-          '@type': 'WebsiteMenuCollection'
-          menus: [
-            {
-              '@type': 'WebsiteMenu'
-              name: 'Menu 2'
-              links: [
-                {
-                  '@type': 'WebsiteMenuLink'
-                  name: 'Link 1'
-                  description: 'This is Link 1'
-                  # image: '/img/test-rocket.svg'
-                  url: ''
-                }
-                {
-                  '@type': 'WebsiteMenuLink'
-                  name: 'Link 2'
-                  description: 'This is Link 2'
-                  # image: '/img/test-rocket.svg'
-                  url: ''
-                }
-                {
-                  '@type': 'WebsiteMenuLink'
-                  name: 'Link 3'
-                  description: 'This is Link 3'
-                  # image: '/img/test-rocket.svg'
-                  url: ''
-                }
-              ]
-            }
-          ]
-        }
+      # menuCollections: [
+      #   {
+      #     '@type': 'WebsiteMenuCollection'
+      #     menus: [
+      #       {
+      #         '@type': 'WebsiteMenu'
+      #         name: 'Menu 1'
+      #         links: [
+      #           {
+      #             '@type': 'WebsiteMenuLink'
+      #             name: 'Link 1'
+      #             description: 'This is Link 1'
+      #             # image: '/img/test-rocket.svg'
+      #             url: ''
+      #           }
+      #           {
+      #             '@type': 'WebsiteMenuLink'
+      #             name: 'Link 2'
+      #             description: 'This is Link 2'
+      #             # image: '/img/test-rocket.svg'
+      #             url: ''
+      #           }
+      #           {
+      #             '@type': 'WebsiteMenuLink'
+      #             name: 'Link 3'
+      #             description: 'This is Link 3'
+      #             # image: '/img/test-rocket.svg'
+      #             url: ''
+      #           }
+      #         ]
+      #       }
+      #     ]
+      #   }
+      #   {
+      #     '@type': 'WebsiteMenuCollection'
+      #     menus: [
+      #       {
+      #         '@type': 'WebsiteMenu'
+      #         name: 'Menu 2'
+      #         links: [
+      #           {
+      #             '@type': 'WebsiteMenuLink'
+      #             name: 'Link 1'
+      #             description: 'This is Link 1'
+      #             # image: '/img/test-rocket.svg'
+      #             url: ''
+      #           }
+      #           {
+      #             '@type': 'WebsiteMenuLink'
+      #             name: 'Link 2'
+      #             description: 'This is Link 2'
+      #             # image: '/img/test-rocket.svg'
+      #             url: ''
+      #           }
+      #           {
+      #             '@type': 'WebsiteMenuLink'
+      #             name: 'Link 3'
+      #             description: 'This is Link 3'
+      #             # image: '/img/test-rocket.svg'
+      #             url: ''
+      #           }
+      #         ]
+      #       }
+      #     ]
+      #   }
         # {
         #   '@type': 'WebsiteMenuCollection'
         #   menus: [
@@ -288,26 +287,26 @@ module.exports =
         #     }
         #   ]
         # }
-        {
-          '@type': 'WebsiteMenuCollection'
-          menus: [
-            {
-              '@type': 'WebsiteMenu'
-              name: 'Support'
-              url: ''
-            }
-          ]
-        }
-        {
-          '@type': 'WebsiteMenuCollection'
-          menus: [
-            {
-              '@type': 'WebsiteMenu'
-              name: 'Call to Action'
-              url: '/'
-            }
-          ]
-        }
+        # {
+        #   '@type': 'WebsiteMenuCollection'
+        #   menus: [
+        #     {
+        #       '@type': 'WebsiteMenu'
+        #       name: 'Support'
+        #       url: ''
+        #     }
+        #   ]
+        # }
+        # {
+        #   '@type': 'WebsiteMenuCollection'
+        #   menus: [
+        #     {
+        #       '@type': 'WebsiteMenu'
+        #       name: 'Call to Action'
+        #       url: '/'
+        #     }
+        #   ]
+        # }
         # {
         #   '@type': 'WebsiteMenuCollection'
         #   menus: [
@@ -318,7 +317,7 @@ module.exports =
         #     }
         #   ]
         # }
-      ]
+      # ]
     }
   }
 
