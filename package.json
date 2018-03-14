@@ -34,6 +34,7 @@
     "postcss-discard-comments": "4.0.0-rc.2",
     "poststylus": "1.0.0",
     "pug": "2.0.1",
+    "pug-plugin-modules": "^0.3.0",
     "reeeset": "0.0.8",
     "rollup-analyzer": "1.1.0",
     "rucksack-css": "1.0.2",

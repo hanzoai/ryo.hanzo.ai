@@ -20,12 +20,14 @@ compilePug = (src, dst) ->
   filename = path.basename src
   return if filename.charAt(0) == '_'
 
-  pug = require 'pug'
+  pug        = require 'pug'
+  pugModules = require 'pug-plugin-modules'
 
   opts =
-    basedir:    __dirname + '/node_modules'
+    basedir:    __dirname
     pretty:     true
     production: if process.env.PRODUCTION then true else false
+    plugins:    [ pugModules baseDir: __dirname ]
 
   for k,v of require './settings'
     opts[k] = v

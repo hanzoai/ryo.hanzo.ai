@@ -1,7 +1,7 @@
-extends /astley.js/src/templates/layout.pug
+extends astley.js/src/templates/layout.pug
 
 block style
-  include _style.pug
+  include ./_style.pug
 
 block vars
   - var pageId = 'login'
@@ -25,8 +25,8 @@ block content
       footer
 
 block script
-  include _script.pug
+  include ./_script.pug
   script(src='//www.google.com/recaptcha/api.js?render=explicit')
 
 block analytics
-  include _analytics.pug
+  include ./_analytics.pug
