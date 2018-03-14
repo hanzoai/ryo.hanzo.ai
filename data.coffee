@@ -28,12 +28,12 @@ module.exports =
             {
               '@type': 'WebsiteMenu'
               name: 'Benefits'
-              url: '#benefits'
+              url: '#cutting-edge'
             }
             {
               '@type': 'WebsiteMenu'
               name: 'About Us'
-              url: '#about-us'
+              url: '#team'
             }
           ]
         }
@@ -47,7 +47,7 @@ module.exports =
             }
             {
               '@type': 'WebsiteMenu'
-              name: 'Demo'
+              name: 'Sign Up'
               url: ''
             }
           ]

@@ -1,0 +1,35 @@
+extends /astley.js/src/templates/layout.pug
+
+block style
+  include _style.pug
+
+block vars
+  - var pageId = 'signup'
+
+block content
+  hero.hero.columns
+    .bg
+    .content
+      register.m-card(immediate-login='true')
+        .m-card-header
+          i.fas.fa-user-plus.fa-2x
+          h4 CREATE ACCOUNT
+        .m-card-body
+          user-name.input(label='Name')
+          user-email.input(label='Email')
+          user-password.input(label='Password')
+          user-password-confirm.input(label='Confirm Password')
+          .error(if='{ errorMessage }')
+            | { errorMessage }
+          recaptcha(sitekey='6LcQeEwUAAAAAJncqWDloYXRnPaVIIyWip3P359M')
+        .m-card-footer
+          button.m-button SIGN UP
+          a.m-link(href='/login') I already have an account.
+      footer
+
+block script
+  include _script.pug
+  script(src='//www.google.com/recaptcha/api.js?render=explicit')
+
+block analytics
+  include _analytics.pug

@@ -56,7 +56,7 @@
     <link href="https://fonts.googleapis.com/css?family=Teko:400" rel="stylesheet"><!--[if lt IE 10]>
     <script src="/js/polyfill/html5-shiv.js"></script><![endif]-->
   </head>
-  <body id="index">
+  <body id="login">
     <!--(style='overflow:hidden')-->
     <!-- Header-->
     <input id="show-mobile-menu" type="checkbox">
@@ -102,132 +102,23 @@
     <main>
       <hero class="hero columns">
         <div class="bg"></div>
-        <div class="content column1">
-          <h1>Introducing Ethical Crowdfunding</h1>
-          <p>Hanzo repairs the broken relationship between creators and backers by re-writing the social contract of crowdfunding - through smart contracts.</p>
+        <div class="content">
+          <login class="m-card" immediate-login="true">
+            <div class="m-card-header"><i class="fas fa-user fa-2x"></i>
+              <h4>Login</h4>
+            </div>
+            <div class="m-card-body">
+              <user-email class="input" label="Email"></user-email>
+              <user-password class="input" label="Password"></user-password>
+              <div class="error" if="{ errorMessage }">{ errorMessage }</div>
+            </div>
+            <div class="m-card-footer">
+              <button class="m-button">Login</button><a class="m-link" href="/signup">I don't have an account.</a>
+            </div>
+          </login>
+          <footer></footer>
         </div>
-        <div class="content column2"><a class="button demo" href="/signup">SIGN UP (This is a Demo Site)</a><a class="button whitepaper" href="/Hanzo Whitepaper.pdf"><span>READ THE WHITE PAPER</span></a></div>
       </hero>
-      <section class="columns" id="how-it-works">
-        <div class="bg white-green-bg"></div>
-        <div class="content column1 white-column">
-          <h1>How it works</h1>
-          <p><img src="/img/how-it-works-goals.svg"><span>Creators set their own goals and milestones with the smart contract</span></p>
-          <p><img src="/img/how-it-works-fund.svg"><span>Backers fund creative projects and get updates as milestones are met</span></p>
-          <p><img src="/img/how-it-works-perks.svg"><span>Backers receive PERK tokens for each project they support and use these for rewards or trade them with other backers for different perks.</span></p>
-          <p><img src="/img/how-it-works-rip.svg"><span>Failed projects are partially refunded with the RYO. Backers can use RYO to contribute to other projects.</span></p>
-          <p><img src="/img/how-it-works-win.svg"><span>Successful creators are able to build and grow their business on Hanzo even after their crowdfunding campaign is over, so the community they have built stays with them as they grow their company.</span></p>
-        </div>
-        <div class="content column2 green-column">
-          <h3>Who wins and how?</h3>
-          <h4>CREATORS</h4>
-          <p>Creators have access to the most powerful analytics and marketing tools available to crowdfunded products. They are able to leverage these tools and the new, more transparent relationship with backers to build a community that has real buy-in to what they are building.</p>
-          <h4>BACKERS</h4>
-          <p>Backers get to continue supporting products they are excited about, but without the fear of big failures down the line. They are also brought into details about the development that they wouldn’t otherwise get, which only serves to build their support and excitement about the product.</p>
-        </div>
-      </section>
-      <section class="columns" id="cutting-edge">
-        <div class="content column1">
-          <div class="card"><img src="/img/access-commerce.svg">
-            <h4>COMMERCE</h4>
-            <p>Hanzo Commerce allows you to build a brand right from your crowdfunding page.  Communicate with backers and customers your way, our ecommerce site grows with your company so when your campaign is done you’re left with a business, not just a CSV file.</p>
-          </div>
-          <div class="card"><img src="/img/access-analytics.svg">
-            <h4>ANALYTICS</h4>
-            <p>Hanzo Analytics give you actionable insight into your potential backers and customers, and feeds directly into our marketing tools.</p>
-          </div>
-          <div class="card"><img src="/img/access-marketing.svg">
-            <h4>MARKETING</h4>
-            <p>Hanzo Marketing gives you the most powerful tools to build your community. We have tools for ad management, referrals marketing, influencer marketing and much more.</p>
-          </div>
-        </div>
-        <div class="content column2">
-          <h1>Access Hanzo’s cutting&#8209;edge platform</h1>
-          <p>Launch your campaign on the most sophisticated crowdfunding platform. We give you the tools to turn your crowdfunded product into a lasting business.</p>
-          <p><img src="/img/cutting-edge-money.svg"><span>$50 MILLION IN PRE-ORDERS</span></p>
-          <p><img src="/img/cutting-edge-end-to-end.svg"><span>END-TO-END SOLUTION</span></p><a href="//hanzo.ai">
-            <h4>VISIT HANZO</h4><img src="/img/arrow-right-purple.svg"></a>
-        </div>
-      </section>
-      <section class="columns" id="team">
-        <div class="bg white-green-bg"></div>
-        <div class="content column1 white-column">
-          <h1>Our Team</h1>
-          <div class="teams">
-            <div class="member"><img src="/img/team-zach.png">
-              <p>ZACH KELLING</p>
-              <p>CEO</p>
-            </div>
-            <div class="member"><img src="/img/team-david.png">
-              <p>DAVID TAI</p>
-              <p>CTO</p>
-            </div>
-            <div class="member"><img src="/img/team-tim.png">
-              <p>TORI BENSON</p>
-              <p>COO</p>
-            </div>
-            <div class="member"><img src="/img/team-tim.png">
-              <p>TIM MESSER</p>
-              <p>Chief Evangelist</p>
-            </div>
-            <div class="member"><img src="/img/team-kirby.png">
-              <p>KIRBY CHAMBLIN</p>
-              <p>VP Design</p>
-            </div>
-            <div class="member"><img src="/img/team-chip.jpg">
-              <p>CHIP</p>
-              <p>Chip</p>
-            </div>
-            <div class="member"><img src="/img/team-quincy.jpg">
-              <p>QUINCY</p>
-              <p>Our 6th President</p>
-            </div>
-            <div class="member"><img src="/img/team-truman.jpg">
-              <p>TRUMAN</p>
-              <p>Cute Cat</p>
-            </div>
-          </div>
-        </div>
-        <div class="content column2 green-column">
-          <h3>Advisors</h3>
-          <div class="advisors">
-            <div class="advisor"><img src="/img/advisors-lisa.png">
-              <h4>LISA GANSKY</h4>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="columns" id="token-sale">
-        <div class="content column1">
-          <h1>Token Sale</h1>
-          <div class="infos columns">
-            <div class="info">
-              <h3>Feb 1, 2018</h3>
-              <h4>STARTED</h4>
-            </div>
-            <div class="info">
-              <h3>10K ETH</h3>
-              <h4>RAISED</h4>
-            </div>
-            <div class="info">
-              <h3>5000</h3>
-              <h4>PARTICIPANTS</h4>
-            </div>
-            <div class="info">
-              <h3>1 Billion RYO</h3>
-              <h4>Token Distribution</h4>
-            </div>
-          </div>
-          <p>1,000,000,000 RYO tokens will be divided and distributed amongst all participants after the contribution period ends. Each participant will receive an allocation proportional to the amount they contributed, relative to the total collected.</p><a href="//hanzo.ai">
-            <h4>CONTRIBUTION TERMS</h4><img src="/img/arrow-right-purple.svg"></a>
-        </div>
-        <div class="content column2">
-          <div class="sale-graph"><img src="/img/token-sale-graph.svg">
-            <p class="total">100K ETH CAP</p>
-            <p class="percent">75K ETH</p>
-          </div>
-        </div>
-      </section>
     </main>
     <footer>
       <div class="footer-small-print">
@@ -243,6 +134,7 @@
     </p><![endif]-->
     <script src="/js/app.js?v=#{ version }"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="//www.google.com/recaptcha/api.js?render=explicit"></script>
     <script>
       !function(t,e,a){var
       r,n,c,i,o,s,l,u;if(null==t.analytics){for(r=[],r.methods=["ab","alias","group","identify","off","on","once","page","pageview","ready","track","trackClick","trackForm","trackLink","trackSubmit"],l=r.methods,c=function(t){r[t]=function(){var

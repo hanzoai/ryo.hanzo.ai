@@ -1,0 +1,32 @@
+extends /astley.js/src/templates/layout.pug
+
+block style
+  include _style.pug
+
+block vars
+  - var pageId = 'login'
+
+block content
+  hero.hero.columns
+    .bg
+    .content
+      login.m-card(immediate-login='true')
+        .m-card-header
+          i.fas.fa-user.fa-2x
+          h4 Login
+        .m-card-body
+          user-email.input(label='Email')
+          user-password.input(label='Password')
+          .error(if='{ errorMessage }')
+            | { errorMessage }
+        .m-card-footer
+          button.m-button Login
+          a.m-link(href='/signup') I don't have an account.
+      footer
+
+block script
+  include _script.pug
+  script(src='//www.google.com/recaptcha/api.js?render=explicit')
+
+block analytics
+  include _analytics.pug
