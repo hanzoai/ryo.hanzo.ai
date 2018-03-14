@@ -25,7 +25,6 @@
     "autoprefixer": "8.1.0",
     "bebop": "1.12.8",
     "clean-css": "4.1.11",
-    "coffeescript": "2.2.3",
     "css-mqpacker": "6.0.2",
     "es-raf": "3.3.1",
     "esmangle": "1.0.1",
@@ -51,6 +50,7 @@
   },
   "dependencies": {
     "astley.js": "0.0.36",
+    "coffeescript": "2.2.3",
     "coin.js": "1.0.6"
   }
 }
