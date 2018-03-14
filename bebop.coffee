@@ -20,8 +20,7 @@ compilePug = (src, dst) ->
   filename = path.basename src
   return if filename.charAt(0) == '_'
 
-  pug        = require 'pug'
-  pugModules = require 'pug-plugin-modules'
+  pug = require 'pug'
 
   opts =
     basedir:    __dirname + '/node_modules'
