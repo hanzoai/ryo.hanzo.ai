@@ -50,7 +50,7 @@
     "stylus": "0.54.5"
   },
   "dependencies": {
-    "astley.js": "0.0.36",
+    "astley.js": "0.0.37",
     "coffeescript": "2.2.3",
     "coin.js": "1.0.6"
   }
