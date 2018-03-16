@@ -27,6 +27,8 @@ task 'build:js', 'build js', ->
     compilers:
       coffee:
         version: 1
+      pug:
+        basedir: __dirname + '/node_modules'
   .catch (err) ->
     console.error err
 
