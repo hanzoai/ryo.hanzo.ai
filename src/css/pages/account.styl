@@ -1,0 +1,67 @@
+#account
+  profile
+    width: 100vw
+    padding: 0
+
+    .logo
+      flex: 1
+
+      .logo-image
+        display: block
+
+    .settings-menu
+      display: box
+      display: flexbox
+      display: flex
+      flex-direction: row
+      align-items: center
+      color: $white
+      flex: 1
+      justify-content: flex-end
+
+      & > *
+        margin-left: $spacing
+
+
+    .columns
+      margin: 0 $spacing * -2 $spacing * 4
+      align-items: flex-start
+
+      & > *
+        margin: 0 $spacing * 2
+
+
+    #coin-count
+      flex: 3
+
+    #buy-coins
+      flex: 2
+
+      .qr
+        text-align: center
+
+      button
+        width: 100%
+
+      .pay-with-metamask-button
+        height: 4rem
+        width: 100%
+        margin-top: 10px
+        margin-bottom: 10px
+        cursor: pointer
+        background-image: url(https://github.com/MetaMask/TipButton/raw/master/images/1_pay_mm_off.png)
+        background-repeat: no-repeat
+        background-size: contain
+
+        &:hover
+          background-image: url(https://github.com/MetaMask/TipButton/raw/master/images/1_pay_mm_over.png)
+
+    #transactions
+      h3
+        width: 100%
+        margin: 0
+
+      .m-table
+        & > *
+          :nth-child(2)
+            flex: 2.5

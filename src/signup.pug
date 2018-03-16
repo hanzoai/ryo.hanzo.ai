@@ -13,7 +13,7 @@ block content
       register.m-card(immediate-login='true')
         .m-card-header
           i.fas.fa-user-plus.fa-2x
-          h4 CREATE ACCOUNT
+          h4 Create Account
         .m-card-body
           user-name.input(label='Name')
           user-email.input(label='Email')
@@ -23,7 +23,8 @@ block content
             | { errorMessage }
           recaptcha(sitekey='6LcQeEwUAAAAAJncqWDloYXRnPaVIIyWip3P359M')
         .m-card-footer
-          button.m-button SIGN UP
+          button.m-button(class='{ loading: loading }' disabled='{ loading }')
+            | SIGN UP
           a.m-link(href='/login') I already have an account.
       footer
 

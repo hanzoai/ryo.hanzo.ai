@@ -755,6 +755,15 @@ footer .footer-small-print .copyright{
   height:100%;
   width:35vw;
 }
+.yellow{
+  color:#ffc107;
+}
+.red{
+  color:#f44336;
+}
+.green{
+  color:#4caf50;
+}
 .m-button{
   box-shadow:1px 2px 1px 0.5px rgba(0,0,0,0.5);
   outline:none;
@@ -2219,6 +2228,40 @@ thankyou :disabled{
 recaptcha{
   display:block;
 }
+.m-card-header h4{
+  margin:0;
+  font-weight:500;
+}
+.dash{
+  display:box;
+  display:flexbox;
+  display:flex;
+  flex-direction:column;
+}
+.dash-header,
+.dash-sub-header,
+.dash-sub-footer,
+.dash-footer{
+  display:box;
+  display:flexbox;
+  display:flex;
+  flex-direction:row;
+}
+.dash-header{
+  box-shadow:1.5px 3px 1.5px 0.5px rgba(0,0,0,0.2);
+  background-color:#022357;
+  align-items:center;
+  padding-top:1rem;
+  padding-bottom:1rem;
+  z-index:1;
+}
+.dash-body{
+  padding-top:2rem;
+  padding-bottom:2rem;
+  background-color:#f5f5f5;
+  height:90vh;
+  display:table;
+}
 #index main h1{
   color:#1de2a0;
 }
@@ -2482,6 +2525,68 @@ recaptcha{
   width:100%;
   margin:0 auto;
 }
+#account profile{
+  width:100vw;
+  padding:0;
+}
+#account profile .logo{
+  flex:1;
+}
+#account profile .logo .logo-image{
+  display:block;
+}
+#account profile .settings-menu{
+  display:box;
+  display:flexbox;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  color:#fff;
+  flex:1;
+  justify-content:flex-end;
+}
+#account profile .settings-menu > *{
+  margin-left:0.5rem;
+}
+#account profile .columns{
+  margin:0 -1rem 2rem;
+  align-items:flex-start;
+}
+#account profile .columns > *{
+  margin:0 1rem;
+}
+#account profile #coin-count{
+  flex:3;
+}
+#account profile #buy-coins{
+  flex:2;
+}
+#account profile #buy-coins .qr{
+  text-align:center;
+}
+#account profile #buy-coins button{
+  width:100%;
+}
+#account profile #buy-coins .pay-with-metamask-button{
+  height:4rem;
+  width:100%;
+  margin-top:10px;
+  margin-bottom:10px;
+  cursor:pointer;
+  background-image:url("https://github.com/MetaMask/TipButton/raw/master/images/1_pay_mm_off.png");
+  background-repeat:no-repeat;
+  background-size:contain;
+}
+#account profile #buy-coins .pay-with-metamask-button:hover{
+  background-image:url("https://github.com/MetaMask/TipButton/raw/master/images/1_pay_mm_over.png");
+}
+#account profile #transactions h3{
+  width:100%;
+  margin:0;
+}
+#account profile #transactions .m-table > * :nth-child(2){
+  flex:2.5;
+}
 @media only screen and (max-width: 650px){
   h1{
     font-size:3.157rem;
@@ -2535,11 +2640,19 @@ recaptcha{
     padding-left:calc((100% - 1200px) / 2);
     padding-right:calc((100% - 1200px) / 2);
   }
+  .dash > *{
+    padding-left:calc((100% - 1200px) / 2);
+    padding-right:calc((100% - 1200px) / 2);
+  }
 }
 @media only screen and (max-width: 1200px){
   header,
   footer,
   main > *{
+    padding-left:2rem;
+    padding-right:2rem;
+  }
+  .dash > *{
     padding-left:2rem;
     padding-right:2rem;
   }

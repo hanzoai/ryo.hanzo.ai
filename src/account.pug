@@ -1,0 +1,93 @@
+extends /astley.js/src/templates/layout.pug
+
+block style
+  include _style.pug
+
+block vars
+  - var pageId = 'account'
+
+block header
+
+block content
+  profile
+    .dash
+      .dash-header
+        .logo
+          a(href='/')
+            img.logo-image(src='/img/logo.svg', alt='Hanzo')
+        .settings-menu
+          i.fas.fa-user-circle.fa-2x
+          span Hello { data.get('user.firstName') }
+      .dash-sub-header
+      .dash-body
+        .columns
+          #coin-count.m-card
+            .m-card-header
+              h4 Your Coins
+            .m-card-body
+            .m-card-footer
+          deposit#buy-coins.m-card
+            .m-card-header
+              h4 Get Coins
+            .m-card-body(if='{ !checkedOut }')
+              currency.input(label='Amount', bind='order.subtotal', currency="{ () => { return data.get('order.currency') } }")
+              .error(if='{ errorMessage }')
+                | { errorMessage }
+            .m-card-body(if='{ checkedOut }')
+              thankyou.ready
+                p.instructions.
+                  Send EXACTLY <strong>{ data.get('order.total') / 1e9 } { data.get('order.currency').toUpperCase() }</strong> to this address:
+                .qr
+                  qrcode(text='{ getQRCode }')
+                .thankyou
+                  copy.input(text='{ getAddress }')
+                    | Your payment was successfully submited to the blockchain.
+                .error(if='{ errorMessage }')
+                  | { errorMessage }
+                .pay-with-metamask(if='{ isMetamaskInstalled() && !checkedOut }')
+                  div(class='{ pay-with-metamask-button: true, disabled: loading }', onclick='{payWithMetamask }')
+                .pay-with-metamask-success(if='{ checkedOut }')
+                  | SUCCESS!
+                p
+                  | This order will expire in 24 hours.
+                  | Contact support ico@hanzo.ai with your destination wallet for refunds
+                  | of over or under payment.
+
+            .m-card-footer(if='{ !checkedOut }')
+              button.m-button(class='{ loading: loading || checkedOut }' disabled='{ loading || checkedOut }')
+                | RESERVE NOW
+        .columns
+          #transactions.m-card
+            .m-card-header
+              h4 Past Transactions
+            .m-card-body.m-table(if='{ data.get("user.orders") && data.get("user.orders").length }')
+              .m-table-row
+                div Order #
+                div Address
+                div Amount
+                div Status
+                div Date
+              .m-table-row(each='{ sortOrders(data.get("user.orders")) }')
+                div
+                  | { number }
+                div
+                  qrcode(text='{ renderCryptoQR(currency, wallet.accounts[0].address, total) }')
+                  div { wallet.accounts[0].address }
+                div
+                  | { renderCurrency(currency, paid) } / { renderCurrency(currency, total) } { currency.toUpperCase() }
+                div(class='{ yellow: paymentStatus == "unpaid", green: paymentStatus == "paid" }')
+                  | { paymentStatus == "unpaid" ? 'Waiting' : 'Received' }
+                div
+                  | { renderDate(createAt) }
+            .m-card-body.m-table(if='{ !data.get("user.orders") || !data.get("user.orders").length }')
+              h4 No transactions yet
+
+      .dash-sub-footer
+      .dash-footer
+
+block script
+  include _script.pug
+
+block analytics
+  include _analytics.pug
+

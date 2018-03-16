@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="Hanzo ICO - Your new ecommerce site">
+    <!-- Facebook-->
+    <meta property="og:title" content="Hanzo ICO">
+    <meta property="og:description" content="Hanzo ICO - Your new ecommerce site">
+    <meta property="og:site_name" content="Hanzo ICO">
+    <meta property="og:url" content="https://hanzo.ai">
+    <meta property="og:type" content="product">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image">
+    <meta property="fb:app_id">
+    <!-- Twitter-->
+    <meta name="twitter:title" content="Hanzo ICO">
+    <meta name="twitter:description" content="Hanzo ICO - Your new ecommerce site">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:image">
+    <meta name="twitter:url" content="https://hanzo.ai">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+    <link rel="/icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+    <link rel="/icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+    <link rel="/icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+    <link rel="/icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+    <link rel="/icon" type="image/png" href="/icon/favicon-128.png" sizes="128x128">
+    <meta name="application-name" content="&amp;nbsp;">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+    <meta name="msapplication-square70x70logo" content="/icon/mstile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="/icon/mstile-150x150.png">
+    <meta name="msapplication-wide310x150logo" content="/icon/mstile-310x150.png">
+    <meta name="msapplication-square310x310logo" content="/icon/mstile-310x310.png">
+    <link rel="stylesheet" href="/css/app.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#33edc1">
+    <meta name="theme-color" content="#ffffff">
+    <title>Hanzo ICO
+    </title>
+    <link href="https://fonts.googleapis.com/css?family=Teko:400" rel="stylesheet"><!--[if lt IE 10]>
+    <script src="/js/polyfill/html5-shiv.js"></script><![endif]-->
+  </head>
+  <body id="account">
+    <!--(style='overflow:hidden')-->
+    <!-- Header-->
+    <input id="show-mobile-menu" type="checkbox">
+    <main>
+      <profile>
+        <div class="dash">
+          <div class="dash-header">
+            <div class="logo"><a href="/"><img class="logo-image" src="/img/logo.svg" alt="Hanzo"></a></div>
+            <div class="settings-menu"><i class="fas fa-user-circle fa-2x"></i><span>Hello { data.get('user.firstName') }</span></div>
+          </div>
+          <div class="dash-sub-header"></div>
+          <div class="dash-body">
+            <div class="columns">
+              <div class="m-card" id="coin-count">
+                <div class="m-card-header">
+                  <h4>Your Coins</h4>
+                </div>
+                <div class="m-card-body"></div>
+                <div class="m-card-footer"></div>
+              </div>
+              <deposit class="m-card" id="buy-coins">
+                <div class="m-card-header">
+                  <h4>Get Coins</h4>
+                </div>
+                <div class="m-card-body" if="{ !checkedOut }">
+                  <currency class="input" label="Amount" bind="order.subtotal" currency="{ () =&gt; { return data.get('order.currency') } }"></currency>
+                  <div class="error" if="{ errorMessage }">{ errorMessage }</div>
+                </div>
+                <div class="m-card-body" if="{ checkedOut }">
+                  <thankyou class="ready">
+                    <p class="instructions">Send EXACTLY <strong>{ data.get('order.total') / 1e9 } { data.get('order.currency').toUpperCase() }</strong> to this address:</p>
+                    <div class="qr">
+                      <qrcode text="{ getQRCode }"></qrcode>
+                    </div>
+                    <div class="thankyou">
+                      <copy class="input" text="{ getAddress }">Your payment was successfully submited to the blockchain.</copy>
+                    </div>
+                    <div class="error" if="{ errorMessage }">{ errorMessage }</div>
+                    <div class="pay-with-metamask" if="{ isMetamaskInstalled() &amp;&amp; !checkedOut }">
+                      <div class="{ pay-with-metamask-button: true, disabled: loading }" onclick="{payWithMetamask }"></div>
+                    </div>
+                    <div class="pay-with-metamask-success" if="{ checkedOut }">SUCCESS!</div>
+                    <p>
+                      This order will expire in 24 hours.
+                      Contact support ico@hanzo.ai with your destination wallet for refunds
+                      of over or under payment.
+                    </p>
+                  </thankyou>
+                </div>
+                <div class="m-card-footer" if="{ !checkedOut }">
+                  <button class="m-button { loading: loading || checkedOut }" disabled="{ loading || checkedOut }">RESERVE NOW</button>
+                </div>
+              </deposit>
+            </div>
+            <div class="columns">
+              <div class="m-card" id="transactions">
+                <div class="m-card-header">
+                  <h4>Past Transactions</h4>
+                </div>
+                <div class="m-card-body m-table" if="{ data.get(&quot;user.orders&quot;) &amp;&amp; data.get(&quot;user.orders&quot;).length }">
+                  <div class="m-table-row">
+                    <div>Order #</div>
+                    <div>Address</div>
+                    <div>Amount</div>
+                    <div>Status</div>
+                    <div>Date</div>
+                  </div>
+                  <div class="m-table-row" each="{ sortOrders(data.get(&quot;user.orders&quot;)) }">
+                    <div>{ number }</div>
+                    <div>
+                      <qrcode text="{ renderCryptoQR(currency, wallet.accounts[0].address, total) }"></qrcode>
+                      <div>{ wallet.accounts[0].address }</div>
+                    </div>
+                    <div>{ renderCurrency(currency, paid) } / { renderCurrency(currency, total) } { currency.toUpperCase() }</div>
+                    <div class="{ yellow: paymentStatus == &quot;unpaid&quot;, green: paymentStatus == &quot;paid&quot; }">{ paymentStatus == "unpaid" ? 'Waiting' : 'Received' }</div>
+                    <div>{ renderDate(createAt) }</div>
+                  </div>
+                </div>
+                <div class="m-card-body m-table" if="{ !data.get(&quot;user.orders&quot;) || !data.get(&quot;user.orders&quot;).length }">
+                  <h4>No transactions yet</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dash-sub-footer"></div>
+          <div class="dash-footer"></div>
+        </div>
+      </profile>
+    </main>
+    <footer>
+      <div class="footer-small-print">
+        <div class="logos"><a class="logo-link" href="http://www.hanzo.ai" itemprop="logos" itemscope itemtype="WebsiteLogo"><img class="logo-image" src="/img/logo-dark.svg" alt="Hanzo" itemprop="image"></a>
+        </div><small class="copyright">© Hanzo ICO 2018</small>
+      </div>
+    </footer><!--[if IE]>
+    <div class="browserupgrade"></div>
+    <p>
+      You are using an strong outdated  browser. Please
+      a(href='http://browsehappy.com/') upgrade your browser to improve
+      your experience and security.
+    </p><![endif]-->
+    <script src="/js/app.js?v=#{ version }"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script>
+      !function(t,e,a){var
+      r,n,c,i,o,s,l,u;if(null==t.analytics){for(r=[],r.methods=["ab","alias","group","identify","off","on","once","page","pageview","ready","track","trackClick","trackForm","trackLink","trackSubmit"],l=r.methods,c=function(t){r[t]=function(){var
+      e;return
+      e=Array.prototype.slice.call(arguments),e.unshift(t),r.push(e),r}},i=0,o=l.length;o>i;i++)s=l[i],c(s);return
+      u=e.createElement("script"),u.async=!0,u.type="text/javascript",u.src=a,n=e.getElementsByTagName("script")[0],n.parentNode.insertBefore(u,n),t.analytics=r}}(window,document,"//cdn.hanzo.io/a/hanzo-ico.js");
+    </script>
+  </body>
+</html>

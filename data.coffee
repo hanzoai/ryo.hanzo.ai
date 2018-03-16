@@ -23,17 +23,17 @@ module.exports =
             {
               '@type': 'WebsiteMenu'
               name: 'How It Works'
-              url: '#how-it-works'
+              url: '/#how-it-works'
             }
             {
               '@type': 'WebsiteMenu'
               name: 'Benefits'
-              url: '#cutting-edge'
+              url: '/#cutting-edge'
             }
             {
               '@type': 'WebsiteMenu'
               name: 'About Us'
-              url: '#team'
+              url: '/#team'
             }
           ]
         }

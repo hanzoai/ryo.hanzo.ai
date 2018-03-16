@@ -50,7 +50,8 @@
     "stylus": "0.54.5"
   },
   "dependencies": {
-    "astley.js": "0.0.37",
-    "coin.js": "1.0.6"
+    "astley.js": "0.0.38",
+    "coin.js": "1.0.6",
+    "moment-timezone": "0.5.14"
   }
 }

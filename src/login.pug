@@ -20,7 +20,8 @@ block content
           .error(if='{ errorMessage }')
             | { errorMessage }
         .m-card-footer
-          button.m-button Login
+          button.m-button(class='{ loading: loading }' disabled='{ loading }')
+            | Login
           a.m-link(href='/signup') I don't have an account.
       footer
 
