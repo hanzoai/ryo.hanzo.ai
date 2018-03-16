@@ -681,7 +681,6 @@ button.important,
   margin:1rem 0;
   width:100%;
   padding:1.5rem;
-  box-shadow:1px 2px 1px 0.5px rgba(0,0,0,0.2);
   border-radius:2px;
 }
 .card:first-child{
@@ -798,7 +797,8 @@ footer .footer-small-print .copyright{
   text-decoration:underline;
 }
 .m-card{
-  box-shadow:2.5px 5px 2.5px 0.5px rgba(0,0,0,0.2);
+  box-shadow:1.5px 3px 1.5px 0.5px rgba(0,0,0,0.2);
+  background-color:#fff;
   padding:0;
   border-radius:2px;
   overflow:hidden;
@@ -823,6 +823,9 @@ footer .footer-small-print .copyright{
 .m-card .m-card-header > *{
   margin-right:1rem;
 }
+.m-card .m-card-header > *:last-child{
+  margin-right:0;
+}
 .m-card .m-card-body{
   margin:1rem;
 }
@@ -837,6 +840,58 @@ footer .footer-small-print .copyright{
 }
 .m-card .m-card-footer > *{
   margin-right:1rem;
+}
+.m-card .m-card-footer > *:last-child{
+  margin-right:0;
+}
+.m-table.m-table{
+  display:box;
+  display:flexbox;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  text-align:center;
+  margin:0;
+}
+.m-table.m-table > *{
+  padding:2rem;
+  width:100%;
+}
+.m-table.m-table .m-table-header{
+  display:box;
+  display:flexbox;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:1.5rem;
+}
+.m-table.m-table .m-table-row,
+.m-table.m-table .m-table-row-header{
+  text-align:left;
+  display:box;
+  display:flexbox;
+  display:flex;
+  flex-direction:row;
+  padding:1rem 1.5rem 1rem 1rem;
+  align-items:center;
+  border-bottom:1px solid rgba(0,0,0,0.12);
+}
+.m-table.m-table .m-table-row > *,
+.m-table.m-table .m-table-row-header > *{
+  flex:1;
+  margin-right:1.5rem;
+  overflow:auto;
+}
+.m-table.m-table .m-table-row > *:last-child,
+.m-table.m-table .m-table-row-header > *:last-child{
+  margin-right:0;
+}
+.m-table.m-table .m-table-row:last-child,
+.m-table.m-table .m-table-row-header:last-child{
+  border-bottom:0;
+}
+.m-table.m-table .m-table-row-header{
+  padding:1.25rem 1.5rem 1.25rem 1rem;
 }
 deposit,
 login,
@@ -2535,7 +2590,10 @@ recaptcha{
 #account profile .logo .logo-image{
   display:block;
 }
-#account profile .settings-menu{
+#account profile input[type=checkbox]{
+  display:none;
+}
+#account profile .settings-header{
   display:box;
   display:flexbox;
   display:flex;
@@ -2544,19 +2602,30 @@ recaptcha{
   color:#fff;
   flex:1;
   justify-content:flex-end;
+  position:relative;
 }
-#account profile .settings-menu > *{
+#account profile .settings-header > *{
   margin-left:0.5rem;
 }
-#account profile .columns{
-  margin:0 -1rem 2rem;
-  align-items:flex-start;
+#account profile .settings-menu{
+  position:absolute;
+  right:0;
+  top:2rem;
+  max-height:0;
+  transition:max-height 400ms ease-in-out;
+  color:#000;
+  cursor:pointer;
 }
-#account profile .columns > *{
-  margin:0 1rem;
+#account profile input:checked ~ .settings-menu,
+#account profile .settings-button:hover ~ .settings-menu,
+#account profile .settings-menu:hover{
+  max-height:100px;
 }
 #account profile #coin-count{
   flex:3;
+}
+#account profile #coin-count .m-card-body{
+  text-align:center;
 }
 #account profile #buy-coins{
   flex:2;
@@ -2668,6 +2737,13 @@ recaptcha{
     position:absolute;
     right:0;
     top:0;
+  }
+  #account profile .columns{
+    margin:0 -1rem 2rem;
+    align-items:flex-start;
+  }
+  #account profile .columns > *{
+    margin:0 1rem;
   }
 }
 @media only screen and (min-width: 651px) and (max-width: 800px){
@@ -2782,5 +2858,11 @@ recaptcha{
   }
   #index main #token-sale .content .infos .info{
     flex:0 0 50%;
+  }
+}
+@media only screen and (max-width: 801px){
+  #account profile .columns > *{
+    margin:1rem 0;
+    width:100%;
   }
 }/*# sourceMappingURL=app.css.map */

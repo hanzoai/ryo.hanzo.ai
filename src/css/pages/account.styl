@@ -9,7 +9,10 @@
       .logo-image
         display: block
 
-    .settings-menu
+    input[type=checkbox]
+      display: none
+
+    .settings-header
       display: box
       display: flexbox
       display: flex
@@ -18,21 +21,43 @@
       color: $white
       flex: 1
       justify-content: flex-end
+      position: relative
 
       & > *
         margin-left: $spacing
 
+    .settings-menu
+      position: absolute
+      right: 0
+      top: 2rem
+      max-height: 0
+      transition: max-height $transitionTime ease-in-out
+      color: $black
+      cursor: pointer
+
+    input:checked ~ .settings-menu
+    .settings-button:hover ~ .settings-menu
+    .settings-menu:hover
+      max-height: 100px
 
     .columns
-      margin: 0 $spacing * -2 $spacing * 4
-      align-items: flex-start
+      +above($tabletWidth + 1)
+        margin: 0 $spacing * -2 $spacing * 4
+        align-items: flex-start
 
-      & > *
-        margin: 0 $spacing * 2
+        & > *
+          margin: 0 $spacing * 2
 
+      +below($tabletWidth + 1)
+        & > *
+          margin: $spacing * 2 0
+          width: 100%
 
     #coin-count
       flex: 3
+
+      .m-card-body
+        text-align: center
 
     #buy-coins
       flex: 2

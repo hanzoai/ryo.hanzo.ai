@@ -21,6 +21,19 @@ m.on 'profile-load-failed', ->
   Coin.client.account.logout()
   document.location.href = '/login'
 
+# m.on 'submit-success', ->
+#   @client.account.get().then (res) =>
+#     @data.set 'user', res
+#     firstName = @data.get 'user.firstName'
+#     lastName = @data.get 'user.lastName'
+#     @data.set 'user.name', firstName + ' ' + lastName
+
+#     Coin.El.scheduleUpdate()
+
 window.sortOrders = (orders) ->
   orders.sort (a, b) ->
-    return moment(a.createdAt).sub moment(b.createdAt)
+    return moment(b.createdAt).diff moment(a.createdAt)
+
+window.logout = () ->
+  Coin.client.account.logout()
+  document.location.href = '/login'

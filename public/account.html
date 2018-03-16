@@ -65,7 +65,13 @@
         <div class="dash">
           <div class="dash-header">
             <div class="logo"><a href="/"><img class="logo-image" src="/img/logo.svg" alt="Hanzo"></a></div>
-            <div class="settings-menu"><i class="fas fa-user-circle fa-2x"></i><span>Hello { data.get('user.firstName') }</span></div>
+            <div class="settings-header">
+              <input id="settings-open" type="checkbox"><i class="fas fa-user-circle fa-2x"></i>
+              <label class="settings-button" for="settings-open">Hello { data.get('user.firstName') }</label>
+              <div class="m-card settings-menu">
+                <div class="m-card-body"><span onclick="{ logout }">Logout</span></div>
+              </div>
+            </div>
           </div>
           <div class="dash-sub-header"></div>
           <div class="dash-body">
@@ -74,8 +80,9 @@
                 <div class="m-card-header">
                   <h4>Your Coins</h4>
                 </div>
-                <div class="m-card-body"></div>
-                <div class="m-card-footer"></div>
+                <div class="m-card-body">
+                  <h1>{ data.get('user.transactions.eth.balance') * 1e-8 } RYO</h1>
+                </div>
               </div>
               <deposit class="m-card" id="buy-coins">
                 <div class="m-card-header">

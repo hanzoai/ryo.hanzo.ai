@@ -15,9 +15,14 @@ block content
         .logo
           a(href='/')
             img.logo-image(src='/img/logo.svg', alt='Hanzo')
-        .settings-menu
+        .settings-header
+          input#settings-open(type='checkbox')
           i.fas.fa-user-circle.fa-2x
-          span Hello { data.get('user.firstName') }
+          label.settings-button(for='settings-open')
+            | Hello { data.get('user.firstName') }
+          .m-card.settings-menu
+            .m-card-body
+              span(onclick='{ logout }') Logout
       .dash-sub-header
       .dash-body
         .columns
@@ -25,7 +30,7 @@ block content
             .m-card-header
               h4 Your Coins
             .m-card-body
-            .m-card-footer
+              h1 { data.get('user.transactions.eth.balance') * 1e-8 } RYO
           deposit#buy-coins.m-card
             .m-card-header
               h4 Get Coins
