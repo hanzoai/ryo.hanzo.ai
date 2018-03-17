@@ -30,12 +30,15 @@ block content
             .m-card-header
               h4 Your Coins
             .m-card-body
-              h1 { data.get('user.transactions.eth.balance') * 1e-8 } RYO
+              h1 { (data.get('user.transactions.eth.balance') || 0).toFixed(3) * 1e-8 } RYO
           deposit#buy-coins.m-card
             .m-card-header
               h4 Get Coins
             .m-card-body(if='{ !checkedOut }')
-              currency.input(label='Amount', bind='order.subtotal', currency="{ () => { return data.get('order.currency') } }")
+              div
+                currency.input(label='Amount', bind='order.subtotal', currency="{ () => { return data.get('order.currency') } }")
+                p
+                  | 1 ETH = 10 RYO
               .error(if='{ errorMessage }')
                 | { errorMessage }
             .m-card-body(if='{ checkedOut }')
@@ -80,8 +83,8 @@ block content
                   div { wallet.accounts[0].address }
                 div
                   | { renderCurrency(currency, paid) } / { renderCurrency(currency, total) } { currency.toUpperCase() }
-                div(class='{ yellow: paymentStatus == "unpaid", green: paymentStatus == "paid" }')
-                  | { paymentStatus == "unpaid" ? 'Waiting' : 'Received' }
+                div(class='{ yellow: paymentStatus == "unpaid", teal: paymentStatus == "unpaid" && paid > 0, green: paymentStatus == "paid" }')
+                  | { paymentStatus == "unpaid" ? paid > 0 ? 'Partial' : 'Waiting' : 'Received' }
                 div
                   | { renderDate(createAt) }
             .m-card-body.m-table(if='{ !data.get("user.orders") || !data.get("user.orders").length }')

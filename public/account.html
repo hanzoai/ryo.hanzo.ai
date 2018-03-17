@@ -81,7 +81,7 @@
                   <h4>Your Coins</h4>
                 </div>
                 <div class="m-card-body">
-                  <h1>{ data.get('user.transactions.eth.balance') * 1e-8 } RYO</h1>
+                  <h1>{ (data.get('user.transactions.eth.balance') || 0).toFixed(3) * 1e-8 } RYO</h1>
                 </div>
               </div>
               <deposit class="m-card" id="buy-coins">
@@ -89,7 +89,10 @@
                   <h4>Get Coins</h4>
                 </div>
                 <div class="m-card-body" if="{ !checkedOut }">
-                  <currency class="input" label="Amount" bind="order.subtotal" currency="{ () =&gt; { return data.get('order.currency') } }"></currency>
+                  <div>
+                    <currency class="input" label="Amount" bind="order.subtotal" currency="{ () =&gt; { return data.get('order.currency') } }"></currency>
+                    <p>1 ETH = 10 RYO</p>
+                  </div>
                   <div class="error" if="{ errorMessage }">{ errorMessage }</div>
                 </div>
                 <div class="m-card-body" if="{ checkedOut }">
@@ -138,7 +141,7 @@
                       <div>{ wallet.accounts[0].address }</div>
                     </div>
                     <div>{ renderCurrency(currency, paid) } / { renderCurrency(currency, total) } { currency.toUpperCase() }</div>
-                    <div class="{ yellow: paymentStatus == &quot;unpaid&quot;, green: paymentStatus == &quot;paid&quot; }">{ paymentStatus == "unpaid" ? 'Waiting' : 'Received' }</div>
+                    <div class="{ yellow: paymentStatus == &quot;unpaid&quot;, teal: paymentStatus == &quot;unpaid&quot; &amp;&amp; paid &gt; 0, green: paymentStatus == &quot;paid&quot; }">{ paymentStatus == "unpaid" ? paid > 0 ? 'Partial' : 'Waiting' : 'Received' }</div>
                     <div>{ renderDate(createAt) }</div>
                   </div>
                 </div>
