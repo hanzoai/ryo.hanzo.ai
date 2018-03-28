@@ -44,18 +44,17 @@ block content
             .m-card-body(if='{ checkedOut }')
               thankyou.ready
                 p.instructions.
-                  Send EXACTLY <strong>{ data.get('order.total') / 1e9 } { data.get('order.currency').toUpperCase() }</strong> to this address:
+                  Send EXACTLY <strong> { renderCurrency(data.get('order.currency'), data.get('order.total')) } { data.get('order.currency').toUpperCase() } </strong> to this address:
                 .qr
                   qrcode(text='{ getQRCode }')
                 .thankyou
                   copy.input(text='{ getAddress }')
-                    | Your payment was successfully submited to the blockchain.
                 .error(if='{ errorMessage }')
                   | { errorMessage }
                 .pay-with-metamask(if='{ isMetamaskInstalled() && !checkedOut }')
                   div(class='{ pay-with-metamask-button: true, disabled: loading }', onclick='{payWithMetamask }')
                 .pay-with-metamask-success(if='{ checkedOut }')
-                  | SUCCESS!
+                  | Your payment was successfully submited to the blockchain.
                 p
                   | This order will expire in 24 hours.
                   | Contact support ico@hanzo.ai with your destination wallet for refunds
@@ -86,7 +85,7 @@ block content
                 div(class='{ yellow: paymentStatus == "unpaid", teal: paymentStatus == "unpaid" && paid > 0, green: paymentStatus == "paid" }')
                   | { paymentStatus == "unpaid" ? paid > 0 ? 'Partial' : 'Waiting' : 'Received' }
                 div
-                  | { renderDate(createAt) }
+                  | { renderDate(createdAt) }
             .m-card-body.m-table(if='{ !data.get("user.orders") || !data.get("user.orders").length }')
               h4 No transactions yet
 

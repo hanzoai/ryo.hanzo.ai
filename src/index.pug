@@ -13,7 +13,7 @@ block content
       h1 Introducing Ethical Crowdfunding
       p Hanzo repairs the broken relationship between creators and backers by re-writing the social contract of crowdfunding - through smart contracts.
     .content.column2
-      a.button.demo(href='/signup')
+      a.button.demo(href='/account')
         | SIGN UP (This is a Demo Site)
       a.button.whitepaper(href='/Hanzo Whitepaper.pdf')
         span READ THE WHITE PAPER
@@ -124,7 +124,9 @@ block content
           h3 Feb 1, 2018
           h4 STARTED
         .info
-          h3 10K ETH
+          h3
+            view
+              | { renderCurrency(data.get('order.currency'), Math.round(data.get('eth.balance') / 1e8) * 1e8) } { data.get('order.currency').toUpperCase() }
           h4 RAISED
         .info
           h3 5000

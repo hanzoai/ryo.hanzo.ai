@@ -48,7 +48,7 @@ module.exports =
             {
               '@type': 'WebsiteMenu'
               name: 'Sign Up'
-              url: ''
+              url: '/account'
             }
           ]
         }

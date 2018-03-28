@@ -65,7 +65,7 @@
         <meta itemprop="type" content="complex">
         <div class="left logos"><a class="logo-link" href="/" itemprop="logos" itemscope itemtype="WebsiteLogo"><img class="logo-image" src="/img/logo.svg" alt="Hanzo" itemprop="image"></a>
         </div>
-        <div class="right secondary"><a class="fade-on-hover" href="" tabindex="0">Whitepaper</a><a class="fade-on-hover" href="" tabindex="0">Sign Up</a>
+        <div class="right secondary"><a class="fade-on-hover" href="" tabindex="0">Whitepaper</a><a class="fade-on-hover" href="/account" tabindex="0">Sign Up</a>
         </div>
         <div class="center primary"><a class="fade-on-hover" href="/#how-it-works" tabindex="0">How It Works</a><a class="fade-on-hover" href="/#cutting-edge" tabindex="0">Benefits</a><a class="fade-on-hover" href="/#team" tabindex="0">About Us</a>
         </div>
@@ -81,7 +81,7 @@
           <div class="menu-bodies" itemprop="menuCollections" itemscope itemtype="WebsiteMenuCollection"><span class="meta-only" itemprop="menus" itemscope itemtype="WebsiteMenu">
               <meta itemprop="url" content="">
               <meta itemprop="name" content="Whitepaper"></span><span class="meta-only" itemprop="menus" itemscope itemtype="WebsiteMenu">
-              <meta itemprop="url" content="">
+              <meta itemprop="url" content="/account">
               <meta itemprop="name" content="Sign Up"></span>
           </div>
         </div>
@@ -93,7 +93,7 @@
             <label class="close-mobile-icon fade-on-hover" for="show-mobile-menu">&#215;</label>
             <div class="menu-collection" itemprop="menuCollections" itemscope itemtype="WebsiteMenuCollection"><a class="fade-on-hover" href="/#how-it-works" tabindex="0" itemprop="url"><span itemprop="name">How It Works</span></a><a class="fade-on-hover" href="/#cutting-edge" tabindex="0" itemprop="url"><span itemprop="name">Benefits</span></a><a class="fade-on-hover" href="/#team" tabindex="0" itemprop="url"><span itemprop="name">About Us</span></a>
             </div>
-            <div class="menu-collection" itemprop="menuCollections" itemscope itemtype="WebsiteMenuCollection"><a class="fade-on-hover" href="" tabindex="0" itemprop="url"><span itemprop="name">Whitepaper</span></a><a class="fade-on-hover" href="" tabindex="0" itemprop="url"><span itemprop="name">Sign Up</span></a>
+            <div class="menu-collection" itemprop="menuCollections" itemscope itemtype="WebsiteMenuCollection"><a class="fade-on-hover" href="" tabindex="0" itemprop="url"><span itemprop="name">Whitepaper</span></a><a class="fade-on-hover" href="/account" tabindex="0" itemprop="url"><span itemprop="name">Sign Up</span></a>
             </div>
           </div>
         </div>
@@ -106,7 +106,7 @@
           <h1>Introducing Ethical Crowdfunding</h1>
           <p>Hanzo repairs the broken relationship between creators and backers by re-writing the social contract of crowdfunding - through smart contracts.</p>
         </div>
-        <div class="content column2"><a class="button demo" href="/signup">SIGN UP (This is a Demo Site)</a><a class="button whitepaper" href="/Hanzo Whitepaper.pdf"><span>READ THE WHITE PAPER</span></a></div>
+        <div class="content column2"><a class="button demo" href="/account">SIGN UP (This is a Demo Site)</a><a class="button whitepaper" href="/Hanzo Whitepaper.pdf"><span>READ THE WHITE PAPER</span></a></div>
       </hero>
       <section class="columns" id="how-it-works">
         <div class="bg white-green-bg"></div>
@@ -206,7 +206,9 @@
               <h4>STARTED</h4>
             </div>
             <div class="info">
-              <h3>10K ETH</h3>
+              <h3>
+                <view>{ renderCurrency(data.get('order.currency'), Math.round(data.get('eth.balance') / 1e8) * 1e8) } { data.get('order.currency').toUpperCase() }</view>
+              </h3>
               <h4>RAISED</h4>
             </div>
             <div class="info">
@@ -241,8 +243,9 @@
       a(href='http://browsehappy.com/') upgrade your browser to improve
       your experience and security.
     </p><![endif]-->
-    <script src="/js/app.js?v=#{ version }"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@0.20.6/dist/web3.min.js"></script>
+    <script src="/js/app.js?v=#{ version }"></script>
     <script>
       !function(t,e,a){var
       r,n,c,i,o,s,l,u;if(null==t.analytics){for(r=[],r.methods=["ab","alias","group","identify","off","on","once","page","pageview","ready","track","trackClick","trackForm","trackLink","trackSubmit"],l=r.methods,c=function(t){r[t]=function(){var
