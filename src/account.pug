@@ -49,11 +49,15 @@ block content
                   qrcode(text='{ getQRCode }')
                 .thankyou
                   copy.input(text='{ getAddress }')
-                .error(if='{ errorMessage }')
+                p.thankyou-metamask-warning(if='{ isMetamaskInstalled() && !isMetamaskLoggedIn() }')
+                  | Log into your Metamask account to pay.
+                p.thankyou-metamask-warning(if='{ isMetamaskInstalled() && isMetamaskLoggedIn() && metamaskNetworkMismatch }')
+                  | Set your Metamask to use the { getNetwork() } network.
+                p.error(if='{ errorMessage }')
                   | { errorMessage }
                 .pay-with-metamask(if='{ isMetamaskInstalled() && !checkedOut }')
-                  div(class='{ pay-with-metamask-button: true, disabled: loading }', onclick='{payWithMetamask }')
-                .pay-with-metamask-success(if='{ checkedOut }')
+                  .pay-with-metamask-button(class='{ disabled: loading || !isMetamaskLoggedIn() || metamaskNetworkMismatch }' onclick='{ payWithMetamask }')
+                p.pay-with-metamask-success(if='{ checkedOut }')
                   | Your payment was successfully submited to the blockchain.
                 p
                   | This order will expire in 24 hours.

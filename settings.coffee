@@ -1,11 +1,11 @@
 url = 'https://hanzo.ai'
 
 name = """
-  Hanzo ICO
+  Hanzo ICO (Demo)
   """
 
 description = """
-  Hanzo ICO - Your new ecommerce site
+  Hanzo ICO (Demo) - Your new ecommerce site
   """
 
 twitter =
