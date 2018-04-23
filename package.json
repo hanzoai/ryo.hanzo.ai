@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/hanzoai/ecommerce-boilerplate#readme",
   "devDependencies": {
-    "autoprefixer": "8.2.0",
+    "autoprefixer": "8.3.0",
     "bebop": "1.12.8",
     "clean-css": "4.1.11",
     "coffee-script": "1.12.7",
@@ -52,6 +52,6 @@
   "dependencies": {
     "astley.js": "0.0.39",
     "coin.js": "1.0.9",
-    "moment-timezone": "0.5.14"
+    "moment-timezone": "0.5.16"
   }
 }
