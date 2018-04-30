@@ -43,7 +43,7 @@ module.exports =
             {
               '@type': 'WebsiteMenu'
               name: 'Whitepaper'
-              url: 'https://docs.google.com/document/d/1RtxOlt7V242fXJ_m4ikHRFZFkR6riLHOV55P55rSQtY/edit'
+              url: 'https://docs.google.com/document/d/1RtxOlt7V242fXJ_m4ikHRFZFkR6riLHOV55P55rSQtY'
             }
             {
               '@type': 'WebsiteMenu'
