@@ -22,10 +22,10 @@
   },
   "homepage": "https://github.com/hanzoai/ecommerce-boilerplate#readme",
   "devDependencies": {
-    "autoprefixer": "8.3.0",
-    "bebop": "1.12.8",
+    "autoprefixer": "8.4.1",
+    "bebop": "1.14.1",
     "clean-css": "4.1.11",
-    "coffeescript": "1.12.7",
+    "coffeescript": "2.3.0",
     "css-mqpacker": "6.0.2",
     "es-raf": "3.3.1",
     "esmangle": "1.0.1",
@@ -40,17 +40,17 @@
     "rucksack-css": "1.0.2",
     "rupture": "0.7.1",
     "sake-bundle": "0.6.7",
-    "sake-cli": "0.6.5",
-    "sake-core": "1.6.3",
+    "sake-cli": "0.7.2",
+    "sake-core": "1.6.7",
     "sake-linked": "0.1.2",
-    "sake-outdated": "0.2.2",
+    "sake-outdated": "0.3.0",
     "sake-publish": "0.1.17",
     "sake-test": "0.2.1",
     "sake-version": "0.1.19",
     "stylus": "0.54.5"
   },
   "dependencies": {
-    "astley.js": "0.0.39",
+    "astley.js": "0.0.41",
     "coin.js": "1.0.9",
     "moment-timezone": "0.5.16"
   }
