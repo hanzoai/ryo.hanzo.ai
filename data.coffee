@@ -22,18 +22,18 @@ module.exports =
           menus: [
             {
               '@type': 'WebsiteMenu'
-              name: 'How It Works'
-              url: '/#how-it-works'
-            }
-            {
-              '@type': 'WebsiteMenu'
-              name: 'Benefits'
+              name: 'Solution'
               url: '/#cutting-edge'
             }
             {
               '@type': 'WebsiteMenu'
-              name: 'About Us'
+              name: 'Team'
               url: '/#team'
+            }
+            {
+              '@type': 'WebsiteMenu'
+              name: 'Token sale'
+              url: '/#token-sale'
             }
           ]
         }
