@@ -22,7 +22,7 @@ module.exports =
           menus: [
             {
               '@type': 'WebsiteMenu'
-              name: 'Solution'
+              name: 'Features'
               url: '/#cutting-edge'
             }
             {
@@ -32,8 +32,8 @@ module.exports =
             }
             {
               '@type': 'WebsiteMenu'
-              name: 'Token sale'
-              url: '/#token-sale'
+              name: 'Token'
+              url: '/#token'
             }
           ]
         }

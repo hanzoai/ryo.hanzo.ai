@@ -1,11 +1,13 @@
 url = 'https://hanzo.ai'
 
 name = """
-  Hanzo ICO (Demo)
+  Hanzo RYO
   """
 
 description = """
-  Hanzo ICO (Demo) - Your new ecommerce site
+  Hanzo RYO. RYO is fuel for your business. RYO unlocks access to Hanzo, a
+  next-generation payments platform. Use RYO to launch blockchain nodes, deploy
+  secure smart contracts, query data from the blockchain and more.
   """
 
 twitter =
@@ -22,7 +24,7 @@ module.exports =
     title:     name
     name:      name
     url:       url
-    copyright: '© ' + name + ' ' + (new Date()).getFullYear()
+    copyright: '© ' + name + ' (Demo) ' + (new Date()).getFullYear()
 
   meta:
     description: description

@@ -2883,52 +2883,52 @@ thankyou .pay-with-metamask .pay-with-metamask-button:hover{
 #index main #team .column2 .advisors .advisor{
   border-radius:2px;
 }
-#index main #token-sale{
+#index main #token{
   background-color:#022357;
 }
-#index main #token-sale .content{
+#index main #token .content{
   flex:auto;
 }
-#index main #token-sale .content h1{
+#index main #token .content h1{
   margin-bottom:0;
 }
-#index main #token-sale .content .infos{
+#index main #token .content .infos{
   padding:2rem 0;
   flex-wrap:wrap;
 }
-#index main #token-sale .content .infos .info h3{
+#index main #token .content .infos .info h3{
   color:#fe98b0;
 }
-#index main #token-sale .content a{
+#index main #token .content a{
   color:#b17be0;
   text-decoration:none;
   display:flex;
   justify-content:flex-start;
   align-items:center;
 }
-#index main #token-sale .content a h4{
+#index main #token .content a h4{
   margin:0 0.5rem 0 0;
 }
-#index main #token-sale .column2 .sale-graph{
+#index main #token .column2 .sale-graph{
   width:250px;
   margin:0 2rem;
   position:relative;
 }
-#index main #token-sale .column2 .sale-graph img{
+#index main #token .column2 .sale-graph img{
   width:100%;
 }
-#index main #token-sale .column2 .sale-graph p{
+#index main #token .column2 .sale-graph p{
   color:#000;
   width:100%;
   position:absolute;
   text-align:center;
 }
-#index main #token-sale .column2 .sale-graph p.total{
+#index main #token .column2 .sale-graph p.total{
   margin-top:1rem;
   top:0;
   color:#1de2a0;
 }
-#index main #token-sale .column2 .sale-graph p.percent{
+#index main #token .column2 .sale-graph p.percent{
   margin-top:1rem;
   top:25%;
 }
@@ -3198,7 +3198,7 @@ thankyou .pay-with-metamask .pay-with-metamask-button:hover{
   #index main #team .column2 .advisor img{
     width:100%;
   }
-  #index main #token-sale .content .infos{
+  #index main #token .content .infos{
     align-items:flex-start;
     justify-content:flex-start;
   }
@@ -3225,7 +3225,7 @@ thankyou .pay-with-metamask .pay-with-metamask-button:hover{
   #index main #team .column1 .teams .member{
     flex:0 0 calc(33% - 2rem);
   }
-  #index main #token-sale .content .infos .info{
+  #index main #token .content .infos .info{
     flex:0 0 50%;
   }
 }
