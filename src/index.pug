@@ -10,14 +10,15 @@ block content
   hero.hero.columns
     .bg
     .content.column1
-      h1 Introducing: Hanzo
+      h1 Introducing: RYO
       p.
-        Next-generation cryptocurrency payments powered by smart contracts.
-        Hanzo is a truly decentralized payment platform designed for
-        developers.
+        RYO is fuel for your business. RYO unlocks access to Hanzo, a
+        next-generation payments platform. Use RYO to launch blockchain nodes,
+        deploy secure smart contracts, query data from the blockchain and more.
+
     .content.column2
-      a.button.demo(href='/account')
-        | JOIN TOKEN SALE
+      a.button.buy(href='/account')
+        | BUY RYO
       a.button.whitepaper(href='https://docs.google.com/document/d/1RtxOlt7V242fXJ_m4ikHRFZFkR6riLHOV55P55rSQtY')
         span READ THE WHITE PAPER
 
@@ -75,7 +76,8 @@ block content
     .content.column2
       h1 Access Hanzo’s cutting&#8209;edge platform
       p.
-        Build on top of a future-proof platform designed for scale.
+        Hanzo is a next-generation payments platform powered by Smart Contracts
+        designed for developers.
       p
         img(src='/img/cutting-edge-money.svg')
         span $50 MILLION IN SALES
@@ -123,7 +125,7 @@ block content
         .member
           img(src='/img/team-truman.jpg')
           p TRUMAN
-          p Cute Cat
+          p Just a cute cat
 
     .content.column2.green-column
       h3(style='text-align: left') We've done this before
@@ -143,31 +145,43 @@ block content
 
   section#token-sale.columns
     .content.column1
-      h1 Token Sale
+      h1 Token Stats
       .infos.columns
         .info
-          h3 Feb 1, 2018
+          h3 July 1, 2018
           h4 STARTED
         .info
           h3
             view
-              | { renderCurrency(data.get('order.currency'), Math.round(data.get('eth.balance') / 1e8) * 1e8) } { data.get('order.currency').toUpperCase() }
-          h4 RAISED
+              | { renderCurrency(data.get('order.currency'),
+              | Math.round(data.get('eth.balance') / 1e8) * 1e8) } RYO
+          h4 PURCHASED
         .info
-          h3 5000
-          h4 PARTICIPANTS
+          h3 50%
+          h4 DISCOUNT
         .info
-          h3 1 Billion RYO
-          h4 Token Distribution
-      p 1,000,000,000 RYO tokens will be divided and distributed amongst all participants after the contribution period ends. Each participant will receive an allocation proportional to the amount they contributed, relative to the total collected.
+          h3 ∞
+          h4 SUPPLY
+      p.
+        RYO is an ERC-20 stable token, pegged to USD. Our token contract
+        automatically adjusts the price of RYO to accomodate for fluctuations
+        in ETH pricing. By using a stable token, we're able to make RYO
+        available at a fair price and our platform's pricing stays simple and
+        easy to reason about.
+      p.
+        In addition, RYO is available at a discount (currently: 50%).  We'll
+        lower the discount every day until July 1, 2022. After that, RYO will
+        be available for $1 USD per token.
+      a(href='https://github.com/hanzoai/ryo-token')
+        h4 SOURCE CODE
+        img(src='/img/arrow-right-purple.svg')
+      p
       a(href='//hanzo.ai')
-        h4 CONTRIBUTION TERMS
+        h4 TERMS AND CONDITIONS
         img(src='/img/arrow-right-purple.svg')
     .content.column2
       .sale-graph
-        img(src='/img/token-sale-graph.svg')
-        p.total 100K ETH CAP
-        p.percent 8.9K ETH
+        img(src='/img/ryo-color.png')
 
 block script
   include ./_script.pug

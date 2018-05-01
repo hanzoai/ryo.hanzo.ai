@@ -21,8 +21,20 @@
         line-height: 6rem
         margin: $spacing 0
 
-        &.demo
+        &.buy
           background-color: $hanzoPurple
+
+          &:before
+            content: ''
+            width: 6rem
+            height: 5rem
+            display: block
+            position: absolute
+            left: $spacing * 2
+            top: $spacing * 2
+            background-image: url(/img/ryo.png)
+            background-repeat: no-repeat
+            background-size: 90%
 
           &:after
             content: ''
@@ -90,7 +102,7 @@
 
       .column2
         p
-          color: #263238
+          color: black
 
       +below($tabletWidth)
         h3
@@ -125,12 +137,12 @@
         padding-right: 4 * $spacing
 
     #cutting-edge
-      background-color: $grey200
+      background-color: #eef1f8
 
       .column1
         .card
           background-color: $white
-          color: $indigo800
+          color: #333
           font-size: 1rem
 
           p
@@ -153,16 +165,17 @@
 
       .column2
         h1
-          color: $hanzoIndigo
+          color: black
 
         text-align: right
-        color: #263238
+        color: #666
         padding-left: $spacing * 4
 
         +below($tabletWidth)
           padding-left: 0
 
         p
+          color: #333
           display: flex
           justify-content: flex-end
           align-items: center
@@ -197,10 +210,9 @@
 
       h1
       h3
-        color: $hanzoIndigo
+        color: #333
 
       .column1
-        color: $hanzoIndigo
         align-self: flex-start
 
         .teams
@@ -293,6 +305,7 @@
             width: 100%
 
           p
+            color: black
             width: 100%
             position: absolute
             text-align: center

@@ -2691,12 +2691,25 @@ thankyou .pay-with-metamask .pay-with-metamask-button:hover{
   line-height:6rem;
   margin:0.5rem 0;
 }
-#index main .hero .button.demo,
-#index main .hero button.demo{
+#index main .hero .button.buy,
+#index main .hero button.buy{
   background-color:#b17be0;
 }
-#index main .hero .button.demo:after,
-#index main .hero button.demo:after{
+#index main .hero .button.buy:before,
+#index main .hero button.buy:before{
+  content:'';
+  width:6rem;
+  height:5rem;
+  display:block;
+  position:absolute;
+  left:1rem;
+  top:1rem;
+  background-image:url("/img/ryo.png");
+  background-repeat:no-repeat;
+  background-size:90%;
+}
+#index main .hero .button.buy:after,
+#index main .hero button.buy:after{
   content:'';
   width:1.5rem;
   height:1.5rem;
@@ -2764,7 +2777,7 @@ thankyou .pay-with-metamask .pay-with-metamask-button:hover{
   flex:0 0 3rem;
 }
 #index main #how-it-works .column2 p{
-  color:#263238;
+  color:#000;
 }
 #index main .white-green-bg:before{
   background-color:#fff;
@@ -2780,11 +2793,11 @@ thankyou .pay-with-metamask .pay-with-metamask-button:hover{
   text-align:right;
 }
 #index main #cutting-edge{
-  background-color:#eee;
+  background-color:#eef1f8;
 }
 #index main #cutting-edge .column1 .card{
   background-color:#fff;
-  color:#283593;
+  color:#333;
   font-size:1rem;
 }
 #index main #cutting-edge .column1 .card p{
@@ -2804,13 +2817,14 @@ thankyou .pay-with-metamask .pay-with-metamask-button:hover{
 }
 #index main #cutting-edge .column2{
   text-align:right;
-  color:#263238;
+  color:#666;
   padding-left:2rem;
 }
 #index main #cutting-edge .column2 h1{
-  color:#022357;
+  color:#000;
 }
 #index main #cutting-edge .column2 p{
+  color:#333;
   display:flex;
   justify-content:flex-end;
   align-items:center;
@@ -2839,10 +2853,9 @@ thankyou .pay-with-metamask .pay-with-metamask-button:hover{
 }
 #index main #team h1,
 #index main #team h3{
-  color:#022357;
+  color:#333;
 }
 #index main #team .column1{
-  color:#022357;
   align-self:flex-start;
 }
 #index main #team .column1 .teams{
@@ -2905,6 +2918,7 @@ thankyou .pay-with-metamask .pay-with-metamask-button:hover{
   width:100%;
 }
 #index main #token-sale .column2 .sale-graph p{
+  color:#000;
   width:100%;
   position:absolute;
   text-align:center;
