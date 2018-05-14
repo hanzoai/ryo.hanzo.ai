@@ -1,6 +1,6 @@
-# Hanzo RYO
+# Ryo
 
-### RYO is rocket fuel for blockchain companies.
+> RYO is rocket fuel for blockchain companies.
 
 The RYO token unlocks access to [Hanzo](https://hanzo.ai), a next-generation
 payments platform. Use RYO to launch blockchain nodes, deploy secure smart
