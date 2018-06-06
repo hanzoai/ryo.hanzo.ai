@@ -20,10 +20,11 @@ task 'build:js', 'build js', ->
   bundle.write
     entry:    'src/js/app.coffee'
     output:   'public/js/app.js'
+    builtins: false
     cache:    false
-    format:   'web'
     commonjs: true
     external: false
+    format:   'web'
     compilers:
       coffee:
         version: 1
