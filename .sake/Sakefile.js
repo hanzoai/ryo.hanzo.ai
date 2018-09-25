@@ -29,10 +29,11 @@ task('build:js', 'build js', function () {
   return bundle.write({
     entry: 'src/js/app.coffee',
     output: 'public/js/app.js',
+    builtins: false,
     cache: false,
-    format: 'web',
     commonjs: true,
     external: false,
+    format: 'web',
     compilers: {
       coffee: {
         version: 2

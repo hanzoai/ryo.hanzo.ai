@@ -10,8 +10,7 @@ Coin.start
     subtotal:  1e9
   eth:
     address: '0x945f873d71b0f497d71a05d25c7bf5e7547ab826'
-    node:    '//35.192.74.139:13264'
-
+    node:    '//api.infura.io/v1/jsonrpc/ropsten'
 
 m = Coin.getMediator()
 
