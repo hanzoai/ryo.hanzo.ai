@@ -27,7 +27,7 @@ task 'build:js', 'build js', ->
     format:   'web'
     compilers:
       coffee:
-        version: 1
+        version: 2
       pug:
         basedir: __dirname + '/node_modules'
   .catch (err) ->

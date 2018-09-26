@@ -36,7 +36,7 @@ task('build:js', 'build js', function () {
     format: 'web',
     compilers: {
       coffee: {
-        version: 1
+        version: 2
       },
       pug: {
         basedir: __dirname + '/node_modules'
